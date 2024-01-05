@@ -10,10 +10,10 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
         
-      - name: Use Node.js 16.x
+      - name: Use Node.js current
         uses: actions/setup-node@v3
         with:
-          node-version: "16"  
+          node-version: current
 
       - name: Install dependencies and Build for Github Pages 🔧
         run: |
@@ -21,10 +21,10 @@ jobs:
           npm run build
 
       - name: Deploy to Github Pages 🚀
-        uses: peaceiris/actions-gh-pages@v3.8.0
+        uses: peaceiris/actions-gh-pages@v3.9.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: ./_site #the static site folder
+          publish_dir: dist
+          publish_branch: gh-pages
 
   
