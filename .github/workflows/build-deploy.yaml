@@ -1,0 +1,51 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"  
+
+      # For deploying on GitHub Pages we need to use a path prefix
+      # The pathprefix is the repo name (https://your-username.github.io/<PATH-PREFIX>/)
+      # See: https://www.11ty.dev/docs/config#deploy-to-a-subdirectory-with-a-path-prefix
+      # Thanks to https://github.community/t/repository-name-in-environment-variable/16856/10
+      - name: Setup variable for repository folder
+        run: echo "REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Install and Build for Github Pages 🔧
+        run: |
+          npm install
+          npm run build -- --pathprefix '${{ env.REPOSITORY_NAME }}'
+
+      - name: Deploy to Github Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          branch: gh-pages
+          folder: _site #the static site folder
+
+      # If you need more privacy / no tracking,
+      # sync your site to your own webspace
+      # https://github.com/marketplace/actions/ftp-deploy
+
+      # Build again if you need another path prefix (or just delete everything after --)
+      # - name: Install and Build for FTP 🔧
+      #   run: |
+      #    npm install
+      #    npm run build -- --pathprefix 'your-subdirectory/'
+
+      #- name: 📂 Sync files
+      #  uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      #  with:
+      #    server: ftp.samkirkland.com
+      #    username: myFtpUserName
+      #    password: ${{ secrets.ftp_password }}

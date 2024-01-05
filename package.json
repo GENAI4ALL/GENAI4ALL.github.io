@@ -1,0 +1,29 @@
+{
+  "name": "genai4all.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve --port=3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GENAI4ALL/GENAI4ALL.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GENAI4ALL/GENAI4ALL.github.io/issues"
+  },
+  "homepage": "https://github.com/GENAI4ALL/GENAI4ALL.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "clean-css": "^5.1.4"
+  },
+  "dependencies": {
+    "sass-embedded": "^1.69.7"
+  }
+}
