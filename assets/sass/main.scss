@@ -1366,3 +1366,61 @@ section.card {
 		/* Center image on mobile */
 	}
 }
+
+/* Course Page */
+.floating-course-structure {
+    position: sticky;
+    top: 20px; /* Adjust as needed to avoid overlapping the header */
+    max-height: calc(100vh - 40px); /* Ensure it doesn't overflow the viewport */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Disable floating on mobile screens */
+@media (max-width: 768px) {
+    .floating-course-structure {
+        position: static; /* Resets the sticky behavior */
+        top: auto; /* Remove the offset */
+        max-height: none; /* Allow the content to expand */
+        overflow-y: visible; /* No scrolling within the div */
+    }
+}
+
+.testimonials-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Keeps testimonials in a single row */
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.testimonials {
+    display: inline-flex; /* Ensures a horizontal row */
+    gap: 15px; /* Adds space between testimonial boxes */
+}
+
+.testimonial {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+    white-space: normal; /* Allows text to wrap within the box */
+    word-wrap: break-word; /* Breaks long words */
+    font-size: 0.9em;
+    line-height: 1.4;
+    height: 240px; /* Fixes the height of the box */
+    width: 280px; /* Sets a consistent width for boxes */
+    overflow: hidden; /* Ensures no scrollbars inside the box */
+    text-overflow: ellipsis; /* Optional: Truncates overflowing text */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow */
+    box-sizing: border-box;
+    display: flex; /* Enables flexible layout */
+    flex-direction: column; /* Stacks blockquote and attribution vertically */
+    justify-content: space-between; /* Aligns content neatly */
+}
+
+

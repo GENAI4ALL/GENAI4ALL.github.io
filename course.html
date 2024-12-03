@@ -35,65 +35,291 @@
 				</header>
 				<div class="container">
 					<div class="row">
-						<div class="col-4 col-5-medium col-12-small">
+						<div class="col-4 col-5-medium col-12-small floating-course-structure">
 							<section class="box style1 card">
-								<h3>Course Structure</h3>
+								<h4><a href="#about">About This Course</a></h4>
+								<h4>Course Structure</h4>
 								<ol class="subsec">
-									<li><a href="#intro">Introduction to Generative AI</a></li>
-									<li><a href="#prompt">Prompt Engineering</a></li>
-									<li>Retrieval Augmented Generation</li>
-									<li>Agentic Systems</li>
-									<li>Fine-tuning & LLMOps</li>
-									<li>Governance</li>
+									<li><a href="#intro">Introduction</a></li>
+									<li><a href="#architecture">Architecture</a></li>
+									<li><a href="#prompt-basic">Prompt Engineering Basics</a></li>
+									<li><a href="#prompt-tech">Prompt Engineering Techniques</a></li>
+									<li><a href="#rag-basic">RAG Basics</a></li>
+									<li><a href="#rag-tech">RAG Techniques</a></li>
+									<li><a href="#single-agent">Single Agent</a></li>
+									<li><a href="#multi-agent">Multi Agents</a></li>
+									<li><a href="#finetuning">Fine-tuning</a></li>
+									<li><a href="#llmops">LLMOps</a></li>
+									<li><a href="#ethics">Ethics</a></li>
+									<li><a href="#governance">Governance</a></li>
 								</ol>
 							</section>
 						</div>
 						<div class="col-8 col-7-medium col-12-small">
-							<section class="box style1" id="intro">
+							<section class="box style1 card" id="about">
+								<h3>About This Course</h3>
+								<p>This course is designed for business students. Drawing from our experience teaching in-person, online, and hybrid formats in graduate programs at the University of Connecticut and the University of Cincinnati, we’ve learned three key lessons:</p>
+								<ul class="subsec">
+									<li>Students lack engaging, structured resources on Generative AI.</li>
+									<li>Understanding GenAI doesn't require advanced coding skills.</li>
+									<li>Using GenAI effectively doesn’t have to be expensive. </li>
+								</ul>
+
+								<p>We’re excited to share our course content below. Each module includes topics, curated reading materials, and episodes from our course to provide a comprehensive learning experience. Don’t just take our word for it—explore what our students have to say through their testimonials.</p>
+								
+								<div class="testimonials-container">
+									<div class="testimonials">
+										<div class="testimonial">
+											<blockquote>"This class has truly broadened my understanding of AI's potential, and I feel more confident in my ability to create innovative solutions that can make a real impact."</blockquote>
+											<p>- Likhitha Guggilla, UConn MS BAPM Student</p>
+										</div>
+										<div class="testimonial">
+											<blockquote>"This was a fantastic class, and the professor was incredible. I learned so much coming into this class with very little knowledge of AI, and now feel prepared to expand my
+												understanding."</blockquote>
+											<p>- Graduate Student, U Cincinnati</p>
+										</div>
+										<div class="testimonial">
+											<blockquote>"Professor Wei Chen's AI class was an unforgettable experience. His expertise in artificial intelligence and practical approach to teaching made complex ideas feel approachable and engaging."</blockquote>
+											<p>- Biao Wang, UConn MS BAPM Student</p>
+										</div>
+										<div class="testimonial">
+											<blockquote>"I did not imagine I would get the opportunity to learn first-hand how to create GenAI models before graduating and open the black box behind its working."</blockquote>
+											<p>- Nishita Rao, UConn MS BAPM Student</p>
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<!--  -->
+							<section class="box style1 card" id="intro">
 								<h3>1. Introduction to Generative AI</h3>
 								<p>The first module introduces the fundamental concepts and applications of Generative AI. Below is a 3-minute podcast that gives you a quick overview of the course.</p>
-								<audio controls>
+								<!-- <audio controls>
 									<source src="audio/podcast_episode1.mp3" type="audio/mpeg">
 									Your browser does not support the audio element.
-								</audio>
+								</audio> -->
 								
 								<ul class="subsec">
-									<li><em>Topics</em></li>
+									<li><strong>Topics</strong></li>
 									<li class="ch">What is GenAI?</li>
 									<li class="ch">GenAI Applications</li>
-									<li class="ch">How GenAI Works</li>
-									<li class="ch">Transformers and Diffusion Models</li>
-									<li class="ch">Building ChatGPT</li>
+									<li class="ch">Customize GenAI for Business</li>
 								</ul>
 								<ul class="subsec">
-									<li><em>Readings & Resources</em></li>
+									<li><strong>Readings & Resources</strong></li>
 									<li class="ch"><a href="https://www.youtube.com/watch?v=SZorAJ4I-sA&t=50s" target="_blank">Transformers (0:50-7:40, 7min)</a></li>
 									<li class="ch"><a href="https://www.youtube.com/watch?v=bSvTVREwSNw" target="_blank">How ChatGPT Works Technically (8min)</a></li>
 								</ul>
 								<ul class="subsec">
-									<li><em>Course Episodes</em></li>
+									<li><strong>Course Episodes</strong></li>
+									<li class="ch"><strong>Introduction to Generative AI</strong><iframe width="100%" height="315" src="https://www.youtube.com/embed/SZorAJ4I-sA?start=50" frameborder="0" allowfullscreen></iframe></li>
+								</ul>
+							</section>
+
+							<section class="box style1" id="architecture">
+								<h3>2. Architecture</h3>
+								<p>The first module introduces the fundamental concepts and applications of Generative AI. Below is a 3-minute podcast that gives you a quick overview of the course.</p>
+								<ul class="subsec">
+									<li><strong>Topics</strong></li>
+									<li class="ch">Deep Learning and Transformers</li>
+									<li class="ch">Building and Evaluating LLMs</li>
+									<li class="ch">Building ChatGPT</li>
+									<li class="ch">Generating Images</li>
+									<li class="ch">Beyond ChatGPT: Our Roadmap</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Readings & Resources</strong></li>
+									<li class="ch"><a href="https://www.youtube.com/watch?v=SZorAJ4I-sA&t=50s" target="_blank">Transformers (0:50-7:40, 7min)</a></li>
+									<li class="ch"><a href="https://www.youtube.com/watch?v=bSvTVREwSNw" target="_blank">How ChatGPT Works Technically (8min)</a></li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Course Episodes</strong></li>
 									<li class="ch"><strong>Introduction to Generative AI</strong><iframe width="100%" height="315" src="https://www.youtube.com/embed/SZorAJ4I-sA?start=50" frameborder="0" allowfullscreen></iframe></li>
 								</ul>
 							</section>
 			
-							<section class="box style1" id="prompt">
-								<h3>2. Prompt Engineering</h3>
+							<section class="box style1" id="prompt-basic">
+								<h3>3. Prompt Engineering Basics</h3>
 								<ul class="subsec">
-									<li><em>Topics</em></li>
-									<li class="ch">Basic Elements</li>
-									<li class="ch">Few Shots Learning</li>
+									<li><strong>Topics</strong></li>
+									<li class="ch">Intro to Prompt Engineering (PE)</li>
+									<li class="ch">Core Elements of PE</li>
+									<li class="ch">Few-Shot Learning</li>
 									<li class="ch">Chain-of-thoughts</li>
-									<li class="ch">Advanced PE Techniques</li>
 								</ul>
 								<ul class="subsec">
-									<li><em>Readings & Resources</em></li>
+									<li><strong>Readings & Resources</strong></li>
 									<li class="ch"><a href="https://www.youtube.com/watch?v=jC4v5AS4RIM" target="_blank">Master the Perfect ChatGPT Prompt Formula! (8min)</a></li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Course Episodes</strong></li>
+									<li>To be updated</li>
+								</ul>
+							</section>
+
+							<section class="box style1" id="prompt-tech">
+								<h3>4. Prompt Engineering Techniques</h3>
+								<ul class="subsec">
+									<li><strong>Topics</strong></li>
+									<li class="ch">Advanced PE Techniques</li>
+									<li class="ch">System and User Prompts</li>
+									<li class="ch">Prompt Injection</li>
+									<li class="ch">LLM Parameters</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Readings & Resources</strong></li>
 									<li class="ch"><a href="https://www.youtube.com/watch?v=Fp-ue4UCE3s" target="_blank">What Is Chain-of-Thought Prompting in Generative AI? (3min)</a></li>
 									<li class="ch"><a href="https://www.youtube.com/watch?v=50W4YeQdnSg" target="_blank">Coding with OpenAI o1 (3min)</a></li>
 								</ul>
 								<ul class="subsec">
-									<li><em>Course Episodes</em></li>
-									
+									<li><strong>Course Episodes</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+							</section>
+							
+							<section class="box style1" id="rag-basic">
+								<h3>5. Retrieval Augmented Generation (RAG) Basics</h3>
+								<ul class="subsec">
+									<li><strong>Topics</strong></li>
+									<li class="ch">RAG Introduction</li>
+									<li class="ch">RAG Pipeline</li>
+									<li class="ch">Embedding</li>
+									<li class="ch">Vector Databases</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Readings & Resources</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Course Episodes</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+							</section>
+
+							<section class="box style1" id="rag-tech">
+								<h3>6. Retrieval Augmented Generation (RAG) Techniques</h3>
+								<ul class="subsec">
+									<li><strong>Topics</strong></li>
+									<li class="ch">How RAG Can Go Wrong</li>
+									<li class="ch">Advanced RAG Techniques</li>
+									<li class="ch">RAG Evaluations</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Readings & Resources</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Course Episodes</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+							</section>
+
+							<section class="box style1" id="single-agent">
+								<h3>7. Single Agent</h3>
+								<ul class="subsec">
+									<li><strong>Topics</strong></li>
+									<li class="ch">Agentic Systems</li>
+									<li class="ch">Agentic System Architecture</li>
+									<li class="ch">Single-Agent Architecture</li>
+									<li class="ch">Buidling GenAI Agents</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Readings & Resources</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Course Episodes</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+							</section>
+
+							<section class="box style1" id="multi-agent">
+								<h3>8. Multi Agent</h3>
+								<ul class="subsec">
+									<li><strong>Topics</strong></li>
+									<li class="ch">Agentic Workflow</li>
+									<li class="ch">Buidling Agentic Workflow</li>
+									<li class="ch">Multi-agent Collaboration</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Readings & Resources</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Course Episodes</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+							</section>
+
+							<section class="box style1" id="finetuning">
+								<h3>9. Fine-tuning</h3>
+								<ul class="subsec">
+									<li><strong>Topics</strong></li>
+									<li class="ch">Fine-tuning Introduction</li>
+									<li class="ch">Fine-tuning or Not</li>
+									<li class="ch">Fine-tuning Techniques</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Readings & Resources</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Course Episodes</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+							</section>
+
+							<section class="box style1" id="llmops">
+								<h3>10. LLMOps</h3>
+								<ul class="subsec">
+									<li><strong>Topics</strong></li>
+									<li class="ch">LLMOps Introduction</li>
+									<li class="ch">LLMOps Processes</li>
+									<li class="ch">LLMOps Infrastructure</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Readings & Resources</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Course Episodes</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+							</section>
+
+							<section class="box style1" id="ethics">
+								<h3>11. Ethics</h3>
+								<ul class="subsec">
+									<li><strong>Topics</strong></li>
+									<li class="ch">The Danger of Hallucination</li>
+									<li class="ch">Intellectual Property Risks</li>
+									<li class="ch">Security and Biases</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Readings & Resources</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Course Episodes</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+							</section>
+
+							<section class="box style1" id="governance">
+								<h3>12. Governance</h3>
+								<ul class="subsec">
+									<li><strong>Topics</strong></li>
+									<li class="ch">Model Transparency</li>
+									<li class="ch">Data Privacy</li>
+									<li class="ch">Future of Work</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Readings & Resources</strong></li>
+									<li class="ch">To be updated</li>
+								</ul>
+								<ul class="subsec">
+									<li><strong>Course Episodes</strong></li>
+									<li class="ch">To be updated</li>
 								</ul>
 							</section>
 						</div>
@@ -120,15 +346,15 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
-			<!-- Global site tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55384618-1"></script>
+			 
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-TFBL1VMHGY"></script>
 			<script>
-			  window.dataLayer = window.dataLayer || [];
-			  function gtag(){dataLayer.push(arguments);}
-			  gtag('js', new Date());
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
 
-			  gtag('config', 'UA-55384618-1');
+			gtag('config', 'G-TFBL1VMHGY');
 			</script>
 	</body>
 </html>
