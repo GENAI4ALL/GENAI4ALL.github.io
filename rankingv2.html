@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>GenAI4All - AI Tools Ranking</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            margin-right: 20px;
+            position: fixed;
+        }
+        .sidebar h2 { font-size: 24px; }
+        .sidebar a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .sidebar a:hover { text-decoration: underline; }
+        .content { flex-grow: 1; margin-left: 220px; }
+        .section { margin-bottom: 40px; }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .tool-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+        }
+        .tool-card .tool-name { font-size: 18px; font-weight: bold; }
+        .tool-link { display: inline-block; padding: 8px 16px; background: #f3f4f6; border-radius: 20px; }
+        .last-updated { text-align: right; color: #666; font-size: 14px; }
+        .wrapper {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .header {
+            margin-bottom: 40px; /* Increased margin to create more space below the header */
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="container">
+            <li><a href="index.html"><h3>GenAI4All</h3></a></li>
+            <li><a href="course.html">Course</a></li>
+            <li><a href="rankingv2.html">AI Tools</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="sidebar">
+        <h2>AI Tools Categories</h2>
+        <ul>
+            <li><a href="#llm-section">1. LLMs</a></li>
+            <li><a href="#framework-section">2. Frameworks</a></li>
+            <li><a href="#vision-section">3. Vision Models</a></li>
+            <li><a href="#audio-section">4. Audio Models</a></li>
+            <li><a href="#vector-db-section">5. Vector Databases</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <header class="header">
+            <h1>Top AI Tools</h1>
+            <p>Ranking AI tools by GitHub stars with live updates.</p>
+        </header>
+        
+        <div id="app" class="wrapper"></div>
+        <div id="lastUpdated" class="last-updated"></div>
+    </div>
+
+    <script>
+        const toolsData = {
+            'llm-section': {
+                title: '🤖 LLMs',
+                definition: 'Large Language Models (LLMs) are advanced AI systems designed for natural language processing tasks. They are capable of understanding and generating human-like text based on the input they receive. These models are trained on vast amounts of text data, allowing them to perform a variety of tasks such as text generation, translation, summarization, and more. LLMs have become essential tools in various applications, from chatbots to content creation, making them a cornerstone of modern AI technology.',
+                tools: [
+                    { repo: 'facebookresearch/llama', name: 'Llama 2', desc: "Meta's LLM designed for high performance and versatility in text generation tasks.", website: 'https://github.com/facebookresearch/llama' },
+                    { repo: 'mistralai/mistral-src', name: 'Mistral', desc: 'A high-performance LLM that excels in generating coherent and contextually relevant text.', website: 'https://github.com/mistralai/mistral-src' },
+                    { repo: 'EleutherAI/gpt-neo', name: 'GPT-Neo', desc: 'An open-source alternative to OpenAI’s GPT-3, designed for various text generation tasks.', website: 'https://github.com/EleutherAI/gpt-neo' },
+                    { repo: 'bigscience-workshop/bloom', name: 'BLOOM', desc: 'A multilingual LLM that supports multiple languages and is designed for diverse applications.', website: 'https://github.com/bigscience-workshop/bloom' }
+                ]
+            },
+            'framework-section': {
+                title: '🛠️ AI Frameworks',
+                definition: 'AI frameworks provide the necessary tools and libraries for building and deploying AI applications. These frameworks simplify the process of developing machine learning models by offering pre-built components, extensive documentation, and community support. They enable developers to focus on creating innovative solutions without getting bogged down by the complexities of underlying algorithms and data processing.',
+                tools: [
+                    { repo: 'huggingface/transformers', name: 'Transformers', desc: 'A library for natural language processing that provides pre-trained models and tools for fine-tuning.', website: 'https://github.com/huggingface/transformers' },
+                    { repo: 'tensorflow/tensorflow', name: 'TensorFlow', desc: 'An end-to-end open-source platform for machine learning, widely used for building and training models.', website: 'https://github.com/tensorflow/tensorflow' },
+                    { repo: 'pytorch/pytorch', name: 'PyTorch', desc: 'A flexible deep learning framework that provides a dynamic computation graph and is popular among researchers.', website: 'https://github.com/pytorch/pytorch' },
+                    { repo: 'fastai/fastai', name: 'fastai', desc: 'A high-level library built on PyTorch that simplifies training neural networks and provides best practices.', website: 'https://github.com/fastai/fastai' }
+                ]
+            },
+            'vision-section': {
+                title: '👁️ Vision Models',
+                definition: 'Vision models are specialized AI systems designed for image processing tasks. They can analyze, interpret, and generate visual content, making them invaluable in fields such as healthcare, autonomous vehicles, and security. These models leverage deep learning techniques to achieve high accuracy in tasks like object detection, image classification, and image generation.',
+                tools: [
+                    { repo: 'CompVis/stable-diffusion', name: 'Stable Diffusion', desc: 'A state-of-the-art text-to-image model that generates high-quality images from textual descriptions.', website: 'https://github.com/CompVis/stable-diffusion' },
+                    { repo: 'openai/dall-e', name: 'DALL-E', desc: 'An AI model that creates images from textual prompts, showcasing the capabilities of generative models.', website: 'https://github.com/openai/dall-e' },
+                    { repo: 'facebookresearch/detectron2', name: 'Detectron2', desc: 'A robust framework for object detection and segmentation tasks, built on PyTorch.', website: 'https://github.com/facebookresearch/detectron2' },
+                    { repo: 'opencv/opencv', name: 'OpenCV', desc: 'An open-source computer vision library that provides tools for image processing and analysis.', website: 'https://github.com/opencv/opencv' }
+                ]
+            },
+            'audio-section': {
+                title: '🎵 Audio Models',
+                definition: 'Audio models are designed to process and analyze audio signals. They can perform tasks such as speech recognition, music generation, and sound classification. These models are increasingly used in applications like virtual assistants, music recommendation systems, and audio editing software, enabling machines to understand and generate audio content effectively.',
+                tools: [
+                    { repo: 'openai/whisper', name: 'Whisper', desc: 'A powerful speech recognition model that transcribes spoken language into text with high accuracy.', website: 'https://github.com/openai/whisper' },
+                    { repo: 'facebookresearch/audiocraft', name: 'AudioCraft', desc: 'A framework for audio generation and processing, enabling the creation of high-quality audio content.', website: 'https://github.com/facebookresearch/audiocraft' },
+                    { repo: 'alphacep/vosk-api', name: 'Vosk', desc: 'An offline speech recognition toolkit that supports multiple languages and works on various platforms.', website: 'https://github.com/alphacep/vosk-api' },
+                    { repo: 'microsoft/DeepSpeed', name: 'DeepSpeed', desc: 'A deep learning optimization library that improves the training speed and efficiency of large models.', website: 'https://github.com/microsoft/DeepSpeed' }
+                ]
+            },
+            'vector-db-section': {
+                title: '🔍 Vector Databases',
+                definition: 'Vector databases are specialized databases designed to store and retrieve high-dimensional vectors efficiently. They are essential for applications involving similarity search, recommendation systems, and machine learning model serving. These databases enable fast querying and retrieval of data based on vector similarity, making them crucial for AI applications that rely on embeddings.',
+                tools: [
+                    { repo: 'milvus-io/milvus', name: 'Milvus', desc: 'An open-source vector database designed for scalable similarity search and analytics.', website: 'https://github.com/milvus-io/milvus' },
+                    { repo: 'qdrant/qdrant', name: 'Qdrant', desc: 'A vector similarity search engine that provides efficient and scalable search capabilities.', website: 'https://github.com/qdrant/qdrant' },
+                    { repo: 'chroma-core/chroma', name: 'Chroma', desc: 'An open-source embedding database that supports efficient storage and retrieval of vector embeddings.', website: 'https://github.com/chroma-core/chroma' },
+                    { repo: 'pinecone-io/pinecone', name: 'Pinecone', desc: 'A fully managed vector database that simplifies the process of building and deploying AI applications.', website: 'https://github.com/pinecone-io/pinecone' }
+                ]
+            }
+        };
+
+        async function fetchStars(repo) {
+            try {
+                let response = await fetch(`https://api.github.com/repos/${repo}`);
+                if (!response.ok) {
+                    console.error(`Failed to fetch stars for ${repo}: ${response.status} ${response.statusText}`);
+                    return 0; // Return 0 if the response is not OK
+                }
+                let data = await response.json();
+                console.log(`Stars for ${repo}: ${data.stargazers_count}`); // Log the star count
+                return data.stargazers_count || 0;
+            } catch (error) {
+                console.error(`Error fetching stars for ${repo}:`, error);
+                return 0;
+            }
+        }
+
+        async function createToolCard(tool, rank) {
+            let stars = await fetchStars(tool.repo);
+            return `
+                <div class="tool-card">
+                    <span class="rank-number">#${rank}</span>
+                    <div class="tool-name">${tool.name}</div>
+                    <div class="tool-desc">${tool.desc}</div>
+                    <a href="${tool.website}" class="tool-link" target="_blank">Learn More →</a>
+                    <div class="tool-stats">⭐ ${stars.toLocaleString()}</div>
+                </div>
+            `;
+        }
+
+        async function createSection(sectionData, sectionId) {
+            let toolsWithStars = await Promise.all(sectionData.tools.map(async (tool) => {
+                const stars = await fetchStars(tool.repo);
+                return { ...tool, stars };
+            }));
+
+            // Sort tools by stars in descending order
+            toolsWithStars.sort((a, b) => b.stars - a.stars);
+
+            // Create tool cards with correct ranking
+            const sortedToolsHtml = await Promise.all(toolsWithStars.map(async (tool, index) => {
+                return createToolCard(tool, index + 1);
+            }));
+
+            return `
+                <div class="section wrapper" id="${sectionId}">
+                    <h2>${sectionData.title}</h2>
+                    <p>${sectionData.definition}</p>
+                    <div class="tools-grid">${sortedToolsHtml.join('')}</div>
+                </div>
+            `;
+        }
+
+        async function renderApp() {
+            let app = document.getElementById('app');
+            app.innerHTML = (await Promise.all(Object.entries(toolsData).map(async ([id, section]) => await createSection(section, id)))).join('');
+            document.getElementById('lastUpdated').textContent = `Last updated: ${new Date().toLocaleString()}`;
+        }
+
+        renderApp();
+    </script>
+</body>
+</html>
