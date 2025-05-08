@@ -1423,4 +1423,21 @@ section.card {
     justify-content: space-between; /* Aligns content neatly */
 }
 
+/* Resources Page */
+.flowcard {
+	text-align: left;
+	padding: 1em;
+	border-radius: 0.5em;
+	border: 1px solid #ddd;
+}
 
+.flowcard p{
+	font-size: 0.9em;
+	margin-bottom: 0.5em;
+}
+
+.flowcard-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+	gap: 1em;
+}

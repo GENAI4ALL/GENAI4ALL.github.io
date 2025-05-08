@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>GenAI4All - AI Tools Ranking</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <!-- Add the component scripts -->
+    <script src="assets/js/components/nav.js"></script>
+    <script src="assets/js/components/footer.js"></script>
+</head>
+<body class="is-preload">
+    <!-- Course Content -->
+    <article class="wrapper style1">
+        <header>
+            <h2>Generative AI Resources</h2>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-5-medium col-12-small floating-course-structure">
+                    <section class="box style1 card">
+                        <h4><a href="#about">Open Source Resources</a></h4>
+                        <ol class="subsec">
+                            <li><a href="#middleware">Middleware</a></li>
+                            <li><a href="#chat-interfaces">Chat Interfaces</a></li>
+                            <li><a href="#framework">Frameworks</a></li>
+                            <li><a href="#multi-agent">Multi-Agent Frameworks</a></li>
+                            <li><a href="#vector-db">Vector Databases</a></li>
+                            <li><a href="#coding-assistants">Coding Assistants</a></li>
+                            <li><a href="#inference-engines">Inference Engines</a></li>
+                            <li><a href="#protocols">Protocols</a></li>
+                        </ol>
+                    </section>
+                </div>
+                <div id="app" class="col-8 col-7-medium col-12-small">
+                    
+                </div>
+    
+            </div>
+    
+        </div>
+    </article>
+
+    <script>
+        const toolsData = {
+            'intro':{
+                title: 'Open Source Resources',
+                definition: 'We curate a list of <strong>open source (only)</strong> resources for Generative AI. This is a work in progress and we will be adding more resources as we find them. Note that we DO NOT include any proprietary resources in this list. Also, we intentionally left out GenAI models (LLM or Diffusion models) because of our focus on applications. Please help us enrich the list by <a href="about.html#contribute" target="_blank">contributing with a pull request</a>.',
+                tools:[]
+            },
+            'middleware': {
+                title: 'Middleware (NoCode or LowCode)',
+                definition: 'GenAI Middleware is a software that sits between the application and the LLMs. These tools are used to quickly build GenAI applications without the need for coding.',
+                tools: [{ repo: 'langgenius/dify', name: 'Dify', desc: "An open-source LLM app development platform. The name is comes from the phrase 'do it for you'.", website: 'https://github.com/langgenius/dify' },
+                    { repo: 'n8n-io/n8n', name: 'n8n', desc: 'Workflow automation platform with native AI capabilities, visual building with custom code, 400+ integrations.', website: 'https://github.com/n8n-io/n8n' },
+                    { repo: 'langflow-ai/langflow', name: 'LangFlow', desc: 'A powerful tool for building and deploying AI-powered agents and workflows.', website: 'https://github.com/langflow-ai/langflow' },
+                    { repo: 'FlowiseAI/Flowise', name: 'Flowise', desc: 'Drag & drop UI to build your customized LLM flow', website: 'https://github.com/FlowiseAI/Flowise' },
+                    { repo: 'comfyanonymous/ComfyUI', name: 'ComfyUI', desc: 'The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.', website: 'https://github.com/comfyanonymous/ComfyUI' }
+                ]
+            },
+            'chat-interfaces': {
+                title: 'Chat Interfaces',
+                definition: 'Chat interfaces are specialized software that manage LLMs.',
+                tools: [
+                    { repo: 'open-webui/open-webui', name: 'Open WebUI', desc: 'User-friendly AI Interface (Supports Ollama, OpenAI API, ...)', website: 'https://github.com/open-webui/open-webui' },
+                    { repo: 'Mintplex-Labs/anything-llm', name: 'Anything LLM', desc: 'The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, No-code agent builder, MCP compatibility, and more.', website: 'https://github.com/Mintplex-Labs/anything-llm' },
+                    { repo: 'lobehub/lobe-chat', name: 'Lobe Chat', desc: 'An open-source, modern-design AI chat framework.', website: 'https://github.com/lobehub/lobe-chat' },
+                    { repo: 'chatboxai/chatbox', name: 'Chatbox', desc: 'User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)', website: 'https://github.com/chatboxai/chatbox' }
+                ]
+            },
+            
+            'framework': {
+                title: 'GenAI Frameworks',
+                definition: 'GenAI frameworks provide the necessary tools and libraries for building and deploying GenAI applications. These frameworks simplify development by offering pre-built components, documentation, and community support.',
+                tools: [
+                    { repo: 'langchain-ai/langchain', name: 'LangChain', desc: 'One of the earliest frameworks for building and deploying GenAI applications.', website: 'https://github.com/langchain-ai/langchain' },
+                    { repo: 'run-llama/llama_index', name: 'LlamaIndex', desc: 'A leading framework for building LLM-powered agents over your data.', website: 'https://github.com/run-llama/llama_index' },
+                    { repo: 'deepset-ai/haystack', name: 'Haystack', desc: 'AI orchestration framework to build customizable, production-ready LLM applications.', website: 'https://github.com/deepset-ai/haystack' },
+                    { repo: 'huggingface/smolagents', name: 'SmolAgents', desc: 'A barebones library for agents that think in python code by Hugging Face.', website: 'https://github.com/huggingface/smolagents' }
+                ]
+            },
+            'multi-agent': {
+                title: 'Multi-Agent Frameworks',
+                definition: 'Multi-Agent frameworks provide the necessary tools and libraries for building and deploying multi-agent applications. ',
+                tools: [
+                    { repo: 'microsoft/autogen', name: 'AutoGen', desc: 'A programming framework for agentic AI from Microsoft.', website: 'https://github.com/microsoft/autogen' },
+                    { repo: 'crewAIInc/crewAI', name: 'CrewAI', desc: 'Framework for orchestrating role-playing, autonomous AI agents.', website: 'https://github.com/crewAIInc/crewAI' },
+                    { repo: 'langchain-ai/langgraph', name: 'LangGraph', desc: 'Build resilient language agents as graphs.', website: 'https://github.com/langchain-ai/langgraph' },
+                    { repo: 'google/adk-python', name: 'Agent Development Kit', desc: 'An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control from Google.', website: 'https://github.com/google/adk-python' }
+                ]
+            },
+            'vector-db': {
+                title: '🔍 Vector Databases',
+                definition: 'Vector databases are specialized databases designed to store and retrieve high-dimensional vectors efficiently. They are essential for applications involving similarity search, recommendation systems, and machine learning model serving. These databases enable fast querying and retrieval of data based on vector similarity, making them crucial for AI applications that rely on embeddings.',
+                tools: [
+                    { repo: 'weaviate/weaviate', name: 'Weaviate', desc: 'Weaviate is an open-source vector database that stores both objects and vectors.', website: 'https://github.com/weaviate/weaviate' },
+                    { repo: 'milvus-io/milvus', name: 'Milvus', desc: 'An open-source vector database designed for scalable similarity search and analytics.', website: 'https://github.com/milvus-io/milvus' },
+                    { repo: 'qdrant/qdrant', name: 'Qdrant', desc: 'A vector similarity search engine that provides efficient and scalable search capabilities.', website: 'https://github.com/qdrant/qdrant' },
+                    { repo: 'chroma-core/chroma', name: 'Chroma', desc: 'An open-source embedding database that supports efficient storage and retrieval of vector embeddings.', website: 'https://github.com/chroma-core/chroma' }
+                ]
+            },
+            'coding-assistants': {
+                title: 'Coding Assistants',
+                definition: 'Coding assistants are specialized software that writes code.',
+                tools: [
+                    { repo: 'cline/cline', name: 'Cline', desc: 'Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.', website: 'https://github.com/cline/cline' },
+                    { repo: 'continuedev/continue', name: 'Continue', desc: 'Create, share, and use custom AI code assistants with our open-source IDE extensions and hub of models, rules, prompts, docs, and other building blocks', website: 'https://github.com/continuedev/continue' }
+                ]
+            },
+            'inference-engines': {
+                title: 'Inference Engines',
+                definition: 'Inference engines are specialized software that managers LLMs.',
+                tools: [
+                    { repo: 'ollama/ollama', name: 'Ollama', desc: 'Get up and running with open LLMs.', website: 'https://github.com/ollama/ollama' },
+                    { repo: 'vllm-project/vllm', name: 'vLLM', desc: 'A high-throughput and memory-efficient inference and serving engine for LLMs.', website: 'https://github.com/vllm-project/vllm' },
+                    { repo: 'BerriAI/litellm', name: 'Litellm', desc: 'A simple library to interface with all LLM providers using a unified API.', website: 'https://github.com/BerriAI/litellm' },
+                    { repo: 'gpustack/gpustack', name: 'GPUStack', desc: 'Manage GPU clusters for running AI models', website: 'https://github.com/gpustack/gpustack' }
+                ]
+            },
+            'protocols': {
+                title: 'Protocols',
+                definition: 'Protocols are specialized software that manage LLMs.',
+                tools: [
+                    { repo: 'modelcontextprotocol/servers', name: 'Model Context Protocol', desc: 'An open protocol that enables seamless integration between LLM applications and external data sources and tools.', website: 'https://github.com/modelcontextprotocol/servers' },
+                    { repo: 'google/A2A', name: 'A2A', desc: 'An open protocol enabling communication and interoperability between opaque agentic applications.', website: 'https://github.com/google/A2A' }
+                ]
+            }
+        };
+
+        let staticStarsData = {};
+
+        async function loadStaticStarsData() {
+            try {
+                const response = await fetch('stars.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load stars data');
+                }
+                staticStarsData = await response.json();
+            } catch (error) {
+                console.error('Error loading static stars data:', error);
+                staticStarsData = {};
+            }
+        }
+
+
+        // Cache for storing star counts
+        const starCache = new Map();
+        const CACHE_DURATION = 1000 * 60 * 60 * 24; // 1 day cache
+
+        async function fetchStars(repo) {
+            // Check cache first
+            const cached = starCache.get(repo);
+            if (cached && (Date.now() - cached.timestamp) < CACHE_DURATION) {
+                return cached.stars;
+            }
+
+            // Use static data if available
+            if (staticStarsData[repo]) {
+                const stars = staticStarsData[repo];
+                starCache.set(repo, {
+                    stars,
+                    timestamp: Date.now()
+                });
+                return stars;
+            }
+
+            // Fallback to 0 if no static data available
+            return 0;
+        }
+
+        async function createToolCard(tool, rank) {
+            let stars = await fetchStars(tool.repo);
+            return `
+                <div class="flowcard">
+                    <h4><a href="${tool.website}" target="_blank">${tool.name}</a></h4>
+                    <p><a href="${tool.website}" target="_blank"><i class="fab fa-github"></i></a> <i class="fas fa-star"></i> ${stars.toLocaleString()}</p>
+                    <p>${tool.desc}</p>
+                </div>
+            `;
+        }
+
+        async function createSection(sectionData, sectionId) {
+            try {
+                let toolsWithStars = await Promise.all(sectionData.tools.map(async (tool) => {
+                    const stars = await fetchStars(tool.repo);
+                    return { ...tool, stars };
+                }));
+
+                // Sort tools by stars in descending order
+                toolsWithStars.sort((a, b) => b.stars - a.stars);
+
+                // Create tool cards with correct ranking
+                const sortedToolsHtml = await Promise.all(toolsWithStars.map(async (tool, index) => {
+                    return createToolCard(tool, index + 1);
+                }));
+
+                return `
+                <section class="box style1 card" id="${sectionId}">
+                    <h3>${sectionData.title}</h3>
+                    <p>${sectionData.definition}</p>
+                    <div class="flowcard-container">
+                        ${sortedToolsHtml.join('')}
+                    </div>
+                </section>
+                `;
+            } catch (error) {
+                console.error(`Error creating section ${sectionId}:`, error);
+                return `
+                    <section class="box style1 card" id="${sectionId}">
+                    <h3>${sectionData.title}</h3>
+                    <p>${sectionData.definition}</p>
+                    <div class="flowcard-container">
+                        <p>Unable to load tools at this time. Please try again later.</p>
+                    </div>
+                </section>
+                `;
+            }
+        }
+
+        async function renderApp() {
+            try {
+                // Load static data first
+                await loadStaticStarsData();
+
+                let app = document.getElementById('app');
+                app.innerHTML = (await Promise.all(Object.entries(toolsData).map(async ([id, section]) => await createSection(section, id)))).join('');
+            } catch (error) {
+                console.error('Error rendering app:', error);
+                document.getElementById('app').innerHTML = '<p>Unable to load content at this time. Please try again later.</p>';
+            }
+        }
+
+        renderApp();
+    </script>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFBL1VMHGY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TFBL1VMHGY');
+    </script>
+</body>
+</html>
