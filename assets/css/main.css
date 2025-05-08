@@ -2058,20 +2058,19 @@ section.card {
 }
 
 .faculty-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 250px 1fr;
   gap: 30px;
+  align-items: start;
 }
 
 .faculty-photo {
-  flex: 0 0 250px;
-  /* Fixed width for the container */
+  width: 250px;
 }
 
 .faculty-photo img {
-  width: 250px;
-  /* Fixed width */
+  width: 100%;
   height: 250px;
-  /* Same as width to make it square */
   display: block;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -2086,12 +2085,11 @@ section.card {
 }
 
 .faculty-info {
-  flex: 1;
+  min-width: 0;
 }
 
-.faculty-info h3 {
+.faculty-info h4 {
   margin: 0 0 0.5em 0;
-  align-items: center;
 }
 
 .faculty-info p {
@@ -2101,14 +2099,12 @@ section.card {
 
 @media (max-width: 768px) {
   .faculty-container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   .faculty-photo {
-    flex: 0 0 auto;
     width: 250px;
-    /* Control image size on mobile */
     margin: 0 auto;
-    /* Center image on mobile */
   }
 }
 /* Course Page */
@@ -2183,4 +2179,49 @@ section.card {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
   gap: 1em;
+}
+
+/* Code blocks */
+.code-block {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 1em 0;
+  overflow-x: auto;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.code-block code {
+  display: block;
+  color: #333;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.code-block code + code {
+  margin-top: 8px;
+}
+
+/* Video container */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 2em 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
