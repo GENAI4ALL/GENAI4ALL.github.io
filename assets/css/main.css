@@ -2108,6 +2108,19 @@ section.card {
   }
 }
 /* Course Page */
+section.module h3 {
+  text-align: center;
+  margin: 0.5em;
+}
+
+section.module p {
+  text-align: left;
+}
+
+section.module li {
+  font-size: 0.9em;
+}
+
 .floating-course-structure {
   position: sticky;
   top: 20px; /* Adjust as needed to avoid overlapping the header */
@@ -2160,6 +2173,48 @@ section.card {
   display: flex; /* Enables flexible layout */
   flex-direction: column; /* Stacks blockquote and attribution vertically */
   justify-content: space-between; /* Aligns content neatly */
+}
+
+.institutions-container {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.center-h4 h4 {
+  margin-bottom: 1.5em;
+  color: #666;
+  text-align: center;
+}
+
+.institution-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.institution-logo {
+  flex: 0 1 180px;
+  padding: 1em;
+  transition: transform 0.3s ease;
+}
+
+.institution-logo:hover {
+  transform: scale(1.05);
+}
+
+.institution-logo img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.institution-logo img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
 /* Resources Page */
