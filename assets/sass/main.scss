@@ -1305,6 +1305,45 @@ section.card {
 	}
 }
 
+/* Support Section */
+.supporters-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	align-items: center;
+	margin-bottom: 2em;
+}
+
+.supporter {
+	display: flex;
+	align-items: center;
+	gap: 1.5em;
+	background: #fff;
+	border-radius: 8px;
+	padding: 1em 2em;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	width: 100%;
+	max-width: 1000px;
+}
+
+.supporter-logo img {
+	max-height: 80px;
+	width: auto;
+}
+
+.supporter-info h4 {
+	margin: 0 0 0.3em 0;
+	font-size: 1.1em;
+}
+
+.supporter-info p {
+	margin: 0;
+	color: #666;
+	font-size: 0.9em;
+	line-height: 1.5;
+	text-align: left;
+}
+
 /* About Page */
 .faculty-card {
 	margin: 2em 0;
