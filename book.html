@@ -6,11 +6,163 @@
 -->
 <html>
 	<head>
-		<title>GenAI4All</title>
+		<title>Generative AI for Business: Frameworks, Tools, and Use Cases - GenAI4All</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+		<style>
+			.book-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 2em;
+			}
+			
+			.book-hero {
+				text-align: center;
+				margin-bottom: 3em;
+				padding: 3em 0;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				border-radius: 8px;
+			}
+			
+			.book-title {
+				font-size: 2.5em;
+				font-weight: bold;
+				margin-bottom: 0.5em;
+				line-height: 1.2;
+			}
+			
+			.book-subtitle {
+				font-size: 1.2em;
+				opacity: 0.9;
+				margin-bottom: 1.5em;
+			}
+			
+			.book-cover {
+				width: 300px;
+				height: 400px;
+				margin: 2em auto;
+				background: white;
+				border-radius: 8px;
+				box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #333;
+				font-weight: bold;
+				font-size: 1.1em;
+				text-align: center;
+				padding: 2em;
+			}
+			
+			.toc-section {
+				background: #f8f9fa;
+				padding: 2em;
+				border-radius: 8px;
+				margin: 2em 0;
+			}
+			
+			.toc-title {
+				font-size: 2em;
+				margin-bottom: 1em;
+				color: #333;
+				text-align: center;
+			}
+			
+			.toc-content {
+				font-family: 'Courier New', monospace;
+				background: white;
+				padding: 2em;
+				border-radius: 4px;
+				border-left: 4px solid #667eea;
+				white-space: pre-line;
+				line-height: 1.6;
+				overflow-x: auto;
+				max-height: 600px;
+				overflow-y: auto;
+			}
+			
+			.book-description {
+				background: white;
+				padding: 2em;
+				border-radius: 8px;
+				margin: 2em 0;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			}
+			
+			.section-title {
+				font-size: 1.8em;
+				margin-bottom: 1em;
+				color: #333;
+				border-bottom: 2px solid #667eea;
+				padding-bottom: 0.5em;
+			}
+			
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2em;
+				margin: 2em 0;
+			}
+			
+			.feature-card {
+				background: white;
+				padding: 1.5em;
+				border-radius: 8px;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+				border-left: 4px solid #667eea;
+			}
+			
+			.feature-title {
+				font-size: 1.3em;
+				font-weight: bold;
+				margin-bottom: 0.5em;
+				color: #333;
+			}
+			
+			.cta-section {
+				text-align: center;
+				margin: 3em 0;
+				padding: 2em;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				border-radius: 8px;
+			}
+			
+			.cta-button {
+				display: inline-block;
+				padding: 1em 2em;
+				background: white;
+				color: #667eea;
+				text-decoration: none;
+				border-radius: 4px;
+				font-weight: bold;
+				margin: 0.5em;
+				transition: transform 0.2s;
+			}
+			
+			.cta-button:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+			}
+
+			@media screen and (max-width: 768px) {
+				.book-title {
+					font-size: 2em;
+				}
+				
+				.book-cover {
+					width: 250px;
+					height: 350px;
+				}
+				
+				.toc-content {
+					font-size: 0.9em;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -20,48 +172,345 @@
 				<li><a href="index.html">
 						<h3>GenAI4All</h3>
 					</a></li>
-				<!-- <li><a href="book.html">Book</a></li> -->
-				<li><a href="newsletter.html">Newsletter</a></li>
+				<li><a href="book.html">Book</a></li>
+				<li><a href="course.html">Course</a></li>
+				<li><a href="resources.html">Resources</a></li>
 				<li><a href="about.html">About</a></li>
-				<!-- <li><a href="contribute.html">Contribute</a></li> -->
 			</ul>
 		</nav>
 
-		<!-- Home -->
-		<article id="top" class="wrapper style1">
-			<div class="container">
-				<iframe src="https://embeds.beehiiv.com/794b6821-a119-4557-8f3d-fe37ea2296b4" data-test-id="beehiiv-embed" width="100%"
-					height="320" frameborder="0" scrolling="no"
-					style="border-radius: 4px; border: 2px solid #e5e7eb; margin: 0; background-color: transparent;"></iframe>
+		<!-- Book Page Content -->
+		<article id="book" class="wrapper style1">
+			<div class="book-container">
+				
+				<!-- Hero Section -->
+				<div class="book-hero">
+					<h1 class="book-title">Generative AI for Business</h1>
+					<p class="book-subtitle">Frameworks, Tools, and Use Cases</p>
+					
+					<div class="book-cover">
+						<div>
+							<div style="font-size: 1.3em; margin-bottom: 1em;">GENERATIVE AI<br>FOR BUSINESS</div>
+							<div style="font-size: 0.9em; margin-bottom: 1em;">Frameworks, Tools, and Use Cases</div>
+							<div style="font-size: 0.8em; opacity: 0.7;">Making GenAI Work for Your Business</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Book Description -->
+				<div class="book-description">
+					<h2 class="section-title">About This Book</h2>
+					<p>A comprehensive guide to implementing Generative AI in business contexts. This book bridges the gap between technical possibilities and practical business applications, providing frameworks, tools, and real-world use cases for successfully integrating GenAI into your organization.</p>
+					
+					<p>Written by business professors with extensive experience teaching GenAI to students and professionals, this book reflects our mission to make GenAI accessible and actionable for business leaders, entrepreneurs, and practitioners.</p>
+				</div>
+
+				<!-- Key Features -->
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="feature-title">🎯 Practical Frameworks</div>
+						<p>Learn proven frameworks for prompt engineering, RAG systems, and agentic AI that you can implement immediately in your business.</p>
+					</div>
+					
+					<div class="feature-card">
+						<div class="feature-title">🛠️ Technical Deep Dives</div>
+						<p>Understand the architecture behind transformers, diffusion models, and the evolution from LLMs to conversational AI.</p>
+					</div>
+					
+					<div class="feature-card">
+						<div class="feature-title">🏢 Business Applications</div>
+						<p>Explore real-world use cases and learn how to customize GenAI solutions for your specific industry and business needs.</p>
+					</div>
+					
+					<div class="feature-card">
+						<div class="feature-title">⚖️ Challenges & Solutions</div>
+						<p>Navigate the complexities of data privacy, hallucination mitigation, and organizational transformation with confidence.</p>
+					</div>
+				</div>
+
+				<!-- Table of Contents -->
+				<div class="toc-section">
+					<h2 class="toc-title">Table of Contents</h2>
+					<div class="toc-content">CONTENTS
+Preface 3
+Contents 5
+List of Figures 11
+List of Tables 13
+List of TODOs 15
+List of TODOs 17
+
+I Overview 19
+
+1 Introduction 21
+1.1 Overview of Generative AI . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+    What is Generative AI? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+    What's Different about Generative AI? . . . . . . . . . . . . . . . . . . . . . 22
+1.2 The Birth of Generative AI . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+    From Symbolic AI to Statistical AI . . . . . . . . . . . . . . . . . . . . . . . 23
+    The Shift to Deep Learning and Transformers . . . . . . . . . . . . . . . . . 24
+    Generative AI as a New Era . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+1.3 Customizing GenAI for Your Business . . . . . . . . . . . . . . . . . . . . . 26
+    Fine-Tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+    Prompt Engineering . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+    Retrieval-Augmented Generation . . . . . . . . . . . . . . . . . . . . . . . . 27
+    Agentic Systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+
+2 Architecture 29
+2.1 The Transformer Revolution . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+    Core Components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+    Training Large Language Models . . . . . . . . . . . . . . . . . . . . . . . . 31
+    Training Process . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+    Computational Requirements . . . . . . . . . . . . . . . . . . . . . . . . 32
+2.2 Diffusion Models for Images . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+    How Diffusion Models Work . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+    Applications and Capabilities . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+2.3 From LLMs to Conversational AI . . . . . . . . . . . . . . . . . . . . . . . . 33
+    Instruction Fine-Tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+    Human Preference Fine-Tuning . . . . . . . . . . . . . . . . . . . . . . . . . 34
+    Reinforcement Learning from Human Feedback (RLHF) . . . . . . . . 34
+    Direct Preference Optimization (DPO) . . . . . . . . . . . . . . . . 35
+    User Experience Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+2.4 Evaluation and Benchmarking . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+    Benchmarks for LLM Evaluation . . . . . . . . . . . . . . . . . . . . . . . . 36
+    Enterprise and Custom Evaluation Needs . . . . . . . . . . . . . . . . . . . . 36
+2.5 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+
+II GenAI Techniques 39
+
+3 Prompt Engineering Basics 41
+3.1 Overview of Prompt Engineering . . . . . . . . . . . . . . . . . . . . . . . . 42
+3.2 Core Elements of Zero-shot Prompts . . . . . . . . . . . . . . . . . . . . . . 42
+    Instruction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+    Input Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+    Output Indicator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+    Context . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+    Example: Image Classification . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+    Iterative Refinement Process . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+3.3 Common Prompt Engineering Techniques . . . . . . . . . . . . . . . . . . . 46
+    Zero-Shot Prompting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+    Few-Shot Prompting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+    Does the Model Really Learn from the Examples? . . . . . . . . . . . 48
+    Limitations of Few-Shot Prompting . . . . . . . . . . . . . . . . . . . 49
+    Role-Playing Prompting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+    Chain-of-Thoughts Prompting . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+    Few-Shot CoT Prompting . . . . . . . . . . . . . . . . . . . . . . . . 51
+    Guided Zero-Shot CoT Prompting . . . . . . . . . . . . . . . . . . . . 51
+    Open-Ended Zero-Shot CoT Prompting . . . . . . . . . . . . . . . . . 52
+
+4 Prompt Engineering Techniques 53
+4.1 Customizing System Prompt and Model Parameters . . . . . . . . . . . . . . 54
+    System vs. User-Level Prompts . . . . . . . . . . . . . . . . . . . . . . . . . 54
+    LLM Parameter Control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+4.2 Advanced Prompt Engineering Techniques . . . . . . . . . . . . . . . . . . . 57
+    Tree-of-Thoughts Prompting . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+    Self-Consistency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+    Self-Refinement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+    Self-Explanation/Maieutic Prompting . . . . . . . . . . . . . . . . . . . . . . 59
+    Emotional Amplification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+4.3 Reasoning Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+4.4 Summary and Implications . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64
+
+5 Retrieval Augmented Generation (RAG) 67
+5.1 Introduction to RAG . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+    Why RAG? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+5.2 An Overview of the RAG Pipeline . . . . . . . . . . . . . . . . . . . . . . . . 69
+    The Key Components of the RAG Pipeline . . . . . . . . . . . . . . . . . . . 70
+5.3 Embeddings: Semantic Representations of Text . . . . . . . . . . . . . . . . 71
+    What Are Embeddings? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 71
+    How Embeddings Work? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72
+    Embeddings in RAG . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
+5.4 Vector Databases: Managing Embeddings Efficiently . . . . . . . . . . . . . 74
+5.5 The Retrieval Process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+5.6 Case Study: Student Admission Chatbot . . . . . . . . . . . . . . . . . . . . 76
+5.7 Concluding Remarks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+
+6 RAG Techniques and Evaluations 79
+6.1 Understanding RAG System Challenges . . . . . . . . . . . . . . . . . . . . . 80
+    Pre-Retrieval Challenges . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+    Retrieval Challenges . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+    Post-Retrieval Challenges . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+6.2 Advanced Techniques for Improving RAG . . . . . . . . . . . . . . . . . . . 82
+    Pre-Retrieval Techniques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
+    Data Quality Management . . . . . . . . . . . . . . . . . . . . . . . . 83
+    Chunking Strategies . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+    Advanced Query Rewriting . . . . . . . . . . . . . . . . . . . . . . . . 84
+    Retrieval Techniques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+    Post-Retrieval Techniques . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+6.3 Evaluating RAG Systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+    Traditional Information Retrieval Metrics . . . . . . . . . . . . . . . . . . . . 88
+    RAG-Specific Evaluation Metrics . . . . . . . . . . . . . . . . . . . . . . . . 88
+    Benchmarks and Evaluation Frameworks . . . . . . . . . . . . . . . . . . . . 89
+
+7 Single-Agent Systems 91
+7.1 Overview of Agentic Systems . . . . . . . . . . . . . . . . . . . . . . . . . . 92
+    Why We Need Agentic Systems . . . . . . . . . . . . . . . . . . . . . . . . . 92
+    Agentic Systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+    Single-Agent Systems . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+    Multi-Agent Systems . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+7.2 Key Components of Single-Agent Systems . . . . . . . . . . . . . . . . . . . 94
+    Reasoning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 95
+    Planning and Reflection . . . . . . . . . . . . . . . . . . . . . . . . . 95
+    Tool Use . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97
+    Function Calling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97
+    Model Context Protocol . . . . . . . . . . . . . . . . . . . . . . . . . . 98
+    Memory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100
+7.3 Design Patterns in Single-Agent Systems . . . . . . . . . . . . . . . . . . . . 102
+    Reactive Pattern . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 102
+    Proactive Pattern . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 102
+7.4 Integrating Prompts, RAG, and Agents . . . . . . . . . . . . . . . . . . . . . 103
+    Prompt Engineering . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
+    RAG . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
+    Tools and API Integrations . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+    Advantages and Limitations of Single-Agent Systems . . . . . . . . . . . . . 108
+
+8 Multi-Agent Systems 111
+8.1 Core Features of Multi-Agent Systems . . . . . . . . . . . . . . . . . . . . . 112
+    Role Differentiation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112
+    Collective Memory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112
+    Collaborative Execution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+8.2 Workflows in Multi-Agent Systems . . . . . . . . . . . . . . . . . . . . . . . 113
+    Pre-Defined Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+    Autonomous Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 114
+    Hybrid Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 114
+8.3 Building Pre-Defined Multi-Agent Workflows . . . . . . . . . . . . . . . . . . 115
+    Nodes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115
+    Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 118
+    Node Orchestration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 119
+8.4 Building Autonomous Multi-Agent Workflows . . . . . . . . . . . . . . . . . 120
+    AutoGen: Conversational Agent Collaboration . . . . . . . . . . . . . . . . . 121
+    LangChain: Modular Building Blocks . . . . . . . . . . . . . . . . . . . . . . 121
+    CrewAI: Role-Based Teams . . . . . . . . . . . . . . . . . . . . . . . . . . . 122
+8.5 Building Hybrid Multi-Agent Workflows . . . . . . . . . . . . . . . . . . . . 122
+    Embedding Autonomous Agents as Nodes in Predefined Workflows . . . . . 123
+    Using Predefined Workflows as Tools for Autonomous Agents . . . . . . . . . 123
+    Incorporating Human Intervention within Autonomous Workflows . . . . . . 125
+
+9 Fine-tuning 127
+9.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 128
+    The Role of Fine-Tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 128
+    When Fine-Tuning May Not Be Necessary . . . . . . . . . . . . . . . . . . . 129
+9.2 Fine-Tuning Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+    Full Fine-Tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+    Parameter-Efficient Fine-Tuning (PEFT) . . . . . . . . . . . . . . . . . . . . 130
+    Low-Rank Adaptation (LoRA) . . . . . . . . . . . . . . . . . . . . . . 130
+    Quantization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 131
+    QLoRA: Quantization Meets LoRA . . . . . . . . . . . . . . . . . . . . . . . 131
+    Selecting the Right Approach . . . . . . . . . . . . . . . . . . . . . . . . . . 132
+    Practical Applications of Fine-Tuning . . . . . . . . . . . . . . . . . . . . . . 132
+9.3 Emerging Directions in Fine-Tuning . . . . . . . . . . . . . . . . . . . . . . . 133
+    Ethical Considerations and Bias Mitigation . . . . . . . . . . . . . . . . . . . 133
+    Integration with Next-Generation Architectures . . . . . . . . . . . . . . . . 133
+9.4 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134
+
+III Challenges and Solutions 135
+
+10 Challenges in Adopting Generative AI 137
+10.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 138
+10.2 Data Privacy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 138
+10.3 Hallucination . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 138
+     Causes of Hallucination . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
+     Real-World Examples of Hallucination . . . . . . . . . . . . . . . . . . . . . 139
+     Risks of Hallucination . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+10.4 Workforce and Organization Adaptation . . . . . . . . . . . . . . . . . . . . 140
+10.5 Legal and Security Vulnerabilities . . . . . . . . . . . . . . . . . . . . . . . . 140
+     Bias in GenAI Outputs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+     Sources of Bias . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+     Impacts on Decision-Making . . . . . . . . . . . . . . . . . . . . . . . . 141
+     Intellectual Property Concerns . . . . . . . . . . . . . . . . . . . . . . . . . . 141
+     Challenges in Training on Copyrighted Content . . . . . . . . . . . . 141
+     Inspiration versus Infringement . . . . . . . . . . . . . . . . . . . . . 142
+     Emerging Solutions and Industry Practices . . . . . . . . . . . . . . . . 142
+     Security Vulnerabilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+     Prompt Injection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+     Prompt Jailbreaking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 144
+
+11 Engineering and Operations 147
+11.1 Context Engineering Foundations . . . . . . . . . . . . . . . . . . . . . . . . 148
+     Model Selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+     Leveraging Domain-Specific Data . . . . . . . . . . . . . . . . . . . . . . . . 149
+     Evaluation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+     Deployment and Monitoring . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+11.2 Privacy and Security Controls . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+     Complexity in Deployment . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+     Managing Data Variance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+     Adapting Infrastructure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+     Cost and Resource Demands . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+     Ensuring Security and Reliability . . . . . . . . . . . . . . . . . . . . . . . . 152
+11.3 Hallucination and Bias Mitigation . . . . . . . . . . . . . . . . . . . . . . . . 152
+     Efficiency Through Parameter-Efficient Fine-Tuning . . . . . . . . . . . . . . 152
+     Cost Optimization Through Strategic Model Selection . . . . . . . . . . . . . 153
+     Strengthening Security with Robust Guardrails . . . . . . . . . . . . . . . . 153
+     Leveraging Open-Source Frameworks for Workflow Optimization . . . . . . . 153
+     Encouraging Collaboration for Iterative Development . . . . . . . . . . . . . 153
+     Balancing Innovation with Practicality . . . . . . . . . . . . . . . . . . . . . 154
+11.4 Evaluation and Continuous Improvement . . . . . . . . . . . . . . . . . . . . 154
+     Evolving Team Structures . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+     Fostering Experimentation and Adaptation . . . . . . . . . . . . . . . . . . . 155
+     Centralizing AI Infrastructure . . . . . . . . . . . . . . . . . . . . . . . . . . 155
+     Managing Cultural Shifts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 155
+     Balancing Customization and Cost . . . . . . . . . . . . . . . . . . . . . . . 156
+
+12 Organising for Generative-AI Success 157
+12.1 Workforce and Organisational Transformation . . . . . . . . . . . . . . . . . 158
+     Transparency: What is Disclosed . . . . . . . . . . . . . . . . . . . . . . . . 159
+     Explainability: Making AI Outputs Understandable . . . . . . . . . . . . . . 160
+     Interpretability: Building Models that Reveal Decision-Making Pathways . . 161
+12.2 Governance and Risk Management . . . . . . . . . . . . . . . . . . . . . . . 162
+     Governing Content Authenticity: Why It Matters . . . . . . . . . . . . . . . 162
+     Techniques for Detecting AI-Generated Content . . . . . . . . . . . . . . . . 162
+     Establishing Provenance: Watermarking and Metadata . . . . . . . . . . . . 163
+12.3 Societal and Ethical Lens . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 164
+     Accountability Throughout the AI Lifecycle . . . . . . . . . . . . . . . . . . 164
+     Collaborative Systems with Human in the Loop . . . . . . . . . . . . . . . . 164
+     Establishing Trust in Human-AI Collaboration . . . . . . . . . . . . . . . . . 166
+     Ensuring Fairness in AI Outcomes . . . . . . . . . . . . . . . . . . . 166
+     Privacy as a Pillar of Trust . . . . . . . . . . . . . . . . . . . . . . . 167
+     Practical Trust-Building Initiatives in Action . . . . . . . . . . . . . . 167</div>
+				</div>
+
+				<!-- Call to Action -->
+				<div class="cta-section">
+					<h2>Get Updates on the Book Release</h2>
+					<p>Stay informed about publication updates, early access opportunities, and related resources.</p>
+					
+					<iframe src="https://embeds.beehiiv.com/794b6821-a119-4557-8f3d-fe37ea2296b4" data-test-id="beehiiv-embed" width="100%"
+						height="160" frameborder="0" scrolling="no"
+						style="border-radius: 4px; border: none; margin: 1em 0; background-color: rgba(255,255,255,0.1);"></iframe>
+					
+					<div style="margin-top: 2em;">
+						<a href="course.html" class="cta-button">Explore Course Materials</a>
+						<a href="resources.html" class="cta-button">Browse AI Tools</a>
+					</div>
+				</div>
+
 			</div>
 		</article>
 		
 		<!-- Footer -->
-		 <article id="footer" class="wrapper style1">
+		<article id="footer" class="wrapper style1">
 			<footer>
 				<ul id="copyright">
 					<li>&copy; 2024 GenAI4All. All rights reserved.</li>
 				</ul>
 			</footer>
-		 </article>
+		</article>
 
-		
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-			<!-- Global site tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55384618-1"></script>
-			<script>
-			  window.dataLayer = window.dataLayer || [];
-			  function gtag(){dataLayer.push(arguments);}
-			  gtag('js', new Date());
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55384618-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
 
-			  gtag('config', 'UA-55384618-1');
-			</script>
+		  gtag('config', 'UA-55384618-1');
+		</script>
 	</body>
 </html>
