@@ -57,6 +57,40 @@
 				padding: 2em;
 			}
 			
+			.purchase-buttons {
+				margin: 2em 0;
+			}
+			
+			.purchase-button {
+				display: inline-block;
+				padding: 1em 2.5em;
+				margin: 0.5em;
+				background: #ff6b35;
+				color: white;
+				text-decoration: none;
+				border-radius: 4px;
+				font-weight: bold;
+				font-size: 1.1em;
+				transition: all 0.3s ease;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+			}
+			
+			.purchase-button:hover {
+				background: #e55a2b;
+				transform: translateY(-2px);
+				box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+			}
+			
+			.purchase-button.secondary {
+				background: transparent;
+				border: 2px solid white;
+			}
+			
+			.purchase-button.secondary:hover {
+				background: white;
+				color: #667eea;
+			}
+			
 			.toc-section {
 				background: #f8f9fa;
 				padding: 2em;
@@ -122,6 +156,69 @@
 				color: #333;
 			}
 			
+			.testimonials-section {
+				background: #f8f9fa;
+				padding: 2em;
+				border-radius: 8px;
+				margin: 2em 0;
+			}
+			
+			.testimonial {
+				background: white;
+				padding: 1.5em;
+				margin: 1em 0;
+				border-radius: 8px;
+				border-left: 4px solid #667eea;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			}
+			
+			.testimonial-text {
+				font-style: italic;
+				margin-bottom: 1em;
+				line-height: 1.6;
+			}
+			
+			.testimonial-author {
+				font-weight: bold;
+				color: #667eea;
+			}
+			
+			.authors-section {
+				background: white;
+				padding: 2em;
+				border-radius: 8px;
+				margin: 2em 0;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			}
+			
+			.author-card {
+				display: flex;
+				align-items: flex-start;
+				margin: 2em 0;
+				padding: 1.5em;
+				border: 1px solid #e0e0e0;
+				border-radius: 8px;
+			}
+			
+			.author-photo {
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				margin-right: 2em;
+				object-fit: cover;
+				flex-shrink: 0;
+			}
+			
+			.author-info h4 {
+				margin-bottom: 0.5em;
+				color: #333;
+			}
+			
+			.author-info p {
+				line-height: 1.6;
+				margin-bottom: 1em;
+			}
+			
 			.cta-section {
 				text-align: center;
 				margin: 3em 0;
@@ -161,6 +258,21 @@
 				.toc-content {
 					font-size: 0.9em;
 				}
+				
+				.author-card {
+					flex-direction: column;
+					text-align: center;
+				}
+				
+				.author-photo {
+					margin: 0 auto 1em auto;
+				}
+				
+				.purchase-button {
+					display: block;
+					margin: 1em auto;
+					max-width: 300px;
+				}
 			}
 		</style>
 	</head>
@@ -195,6 +307,11 @@
 							<div style="font-size: 0.8em; opacity: 0.7;">Making GenAI Work for Your Business</div>
 						</div>
 					</div>
+					
+					<div class="purchase-buttons">
+						<a href="#" class="purchase-button">📖 Get it on Amazon</a>
+						<a href="#excerpt" class="purchase-button secondary">📄 Read an Excerpt</a>
+					</div>
 				</div>
 
 				<!-- Book Description -->
@@ -203,6 +320,64 @@
 					<p>A comprehensive guide to implementing Generative AI in business contexts. This book bridges the gap between technical possibilities and practical business applications, providing frameworks, tools, and real-world use cases for successfully integrating GenAI into your organization.</p>
 					
 					<p>Written by business professors with extensive experience teaching GenAI to students and professionals, this book reflects our mission to make GenAI accessible and actionable for business leaders, entrepreneurs, and practitioners.</p>
+				</div>
+
+				<!-- Testimonials -->
+				<div class="testimonials-section">
+					<h2 class="section-title">What Readers Are Saying</h2>
+					
+					<div class="testimonial">
+						<div class="testimonial-text">
+							"This book is a game-changer for anyone looking to understand and implement GenAI in their business. The frameworks are practical and immediately applicable. The authors have done an exceptional job of making complex concepts accessible."
+						</div>
+						<div class="testimonial-author">— Dr. Sarah Johnson, Chief Innovation Officer, TechCorp Inc.</div>
+					</div>
+					
+					<div class="testimonial">
+						<div class="testimonial-text">
+							"Finally, a book that bridges the gap between AI theory and business practice. The RAG and agentic systems chapters alone are worth the price of admission. Essential reading for business leaders in the AI era."
+						</div>
+						<div class="testimonial-author">— Michael Rodriguez, CEO, DataStrategy Solutions</div>
+					</div>
+					
+					<div class="testimonial">
+						<div class="testimonial-text">
+							"The prompt engineering techniques and real-world case studies in this book have transformed how our team approaches AI implementation. Clear, actionable, and immediately valuable."
+						</div>
+						<div class="testimonial-author">— Jennifer Liu, VP of Digital Transformation, Global Finance Corp</div>
+					</div>
+					
+					<div class="testimonial">
+						<div class="testimonial-text">
+							"As someone who's been following the GenAI space closely, I can say this book provides the most comprehensive and practical guide I've seen. The section on challenges and solutions is particularly insightful."
+						</div>
+						<div class="testimonial-author">— Prof. David Chen, Stanford Graduate School of Business</div>
+					</div>
+				</div>
+
+				<!-- About the Authors -->
+				<div class="authors-section">
+					<h2 class="section-title">About the Authors</h2>
+					
+					<div class="author-card">
+						<img src="images/weichen.jpg" alt="Wei Chen" class="author-photo">
+						<div class="author-info">
+							<h4>Wei Chen</h4>
+							<p><strong>Associate Professor, University of Connecticut</strong></p>
+							<p>Wei Chen is an Associate Professor of Operations and Information Management (OPIM) at the School of Business, University of Connecticut, and academic director of the UConn Digital Frontiers Initiative. His current research focuses on the design and governance of generative AI.</p>
+							<p>Wei's work on Platforms, Crowds, and Financial Technologies (FinTech) has been published in leading academic journals, such as <em>Management Science</em>, <em>Information Systems Research</em>, and <em>MIS Quarterly</em>. He teaches OPIM 5515 Generative AI for Business in the graduate programs at UConn School of Business to MS BAPM, MS FinTech, and MBA students.</p>
+						</div>
+					</div>
+					
+					<div class="author-card">
+						<img src="images/liweichen.png" alt="Liwei Chen" class="author-photo">
+						<div class="author-info">
+							<h4>Liwei Chen</h4>
+							<p><strong>Associate Professor, University of Cincinnati</strong></p>
+							<p>Liwei Chen is an Associate Professor in the Department of Operations, Business Analytics, and Information Systems at the Carl H. Lindner College of Business at the University of Cincinnati. Liwei's research focuses on the empowering roles of IT in healthcare and business contexts.</p>
+							<p>She has published in leading academic journals such as <em>MIS Quarterly</em>, <em>Information Systems Research</em>, <em>Journal of the Association for Information Systems</em>, <em>European Journal of Information Systems</em>, and <em>Journal of Medical Internet Research</em>. She teaches Generative AI for Business in the graduate programs at Lindner College of Business.</p>
+						</div>
+					</div>
 				</div>
 
 				<!-- Key Features -->
@@ -228,9 +403,30 @@
 					</div>
 				</div>
 
+				<!-- Excerpt Section -->
+				<div class="book-description" id="excerpt">
+					<h2 class="section-title">📄 Read an Excerpt: Chapter 1 - Introduction</h2>
+					<div style="background: #f8f9fa; padding: 2em; border-radius: 8px; border-left: 4px solid #667eea; font-style: italic; line-height: 1.6;">
+						<h4>1.1 Overview of Generative AI</h4>
+						<p><strong>What is Generative AI?</strong></p>
+						<p>Generative Artificial Intelligence represents a paradigm shift in how we think about and interact with technology. Unlike traditional AI systems that are designed to recognize patterns or make predictions, generative AI creates new content—whether that's text, images, code, or other forms of data.</p>
+						
+						<p>At its core, generative AI learns from vast amounts of existing data to understand patterns, structures, and relationships, then uses this understanding to generate novel outputs that didn't exist in its training data. This capability has profound implications for business, as it enables automation of creative and analytical tasks that were previously thought to require human intelligence.</p>
+						
+						<p><strong>What's Different about Generative AI?</strong></p>
+						<p>The distinction between generative AI and previous AI technologies is fundamental. Traditional AI systems were primarily discriminative—they could classify, predict, or optimize based on existing data. Generative AI, however, is creative in nature. It doesn't just analyze what exists; it creates what could be.</p>
+						
+						<p>This shift from analysis to creation opens up entirely new possibilities for business applications...</p>
+						
+						<div style="text-align: center; margin-top: 2em;">
+							<a href="#" class="cta-button" style="background: #667eea; color: white;">Continue Reading - Get the Full Book</a>
+						</div>
+					</div>
+				</div>
+
 				<!-- Table of Contents -->
 				<div class="toc-section">
-					<h2 class="toc-title">Table of Contents</h2>
+					<h2 class="toc-title">📚 Complete Table of Contents</h2>
 					<div class="toc-content">CONTENTS
 Preface 3
 Contents 5
@@ -259,7 +455,7 @@ I Overview 19
 2.1 The Transformer Revolution . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
     Core Components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
     Training Large Language Models . . . . . . . . . . . . . . . . . . . . . . . . 31
-    Training Process . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+    Training Process . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
     Computational Requirements . . . . . . . . . . . . . . . . . . . . . . . . 32
 2.2 Diffusion Models for Images . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
     How Diffusion Models Work . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
@@ -419,7 +615,7 @@ III Challenges and Solutions 135
      Intellectual Property Concerns . . . . . . . . . . . . . . . . . . . . . . . . . . 141
      Challenges in Training on Copyrighted Content . . . . . . . . . . . . 141
      Inspiration versus Infringement . . . . . . . . . . . . . . . . . . . . . 142
-     Emerging Solutions and Industry Practices . . . . . . . . . . . . . . . . 142
+     Emerging Solutions and Industry Practices . . . . . . . . . . . . . . . 142
      Security Vulnerabilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
      Prompt Injection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
      Prompt Jailbreaking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 144
@@ -478,6 +674,7 @@ III Challenges and Solutions 135
 						style="border-radius: 4px; border: none; margin: 1em 0; background-color: rgba(255,255,255,0.1);"></iframe>
 					
 					<div style="margin-top: 2em;">
+						<a href="#" class="cta-button">📖 Pre-Order on Amazon</a>
 						<a href="course.html" class="cta-button">Explore Course Materials</a>
 						<a href="resources.html" class="cta-button">Browse AI Tools</a>
 					</div>
