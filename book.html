@@ -22,9 +22,9 @@
 				text-align: center;
 				margin-bottom: 3em;
 				padding: 3em 0;
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
 				color: white;
-				border-radius: 8px;
+				border-radius: 12px;
 			}
 			
 			.book-title {
@@ -110,7 +110,7 @@
 				background: white;
 				padding: 2em;
 				border-radius: 4px;
-				border-left: 4px solid #667eea;
+				border-left: 4px solid #60a5fa;
 				white-space: pre-line;
 				line-height: 1.6;
 				overflow-x: auto;
@@ -130,7 +130,7 @@
 				font-size: 1.8em;
 				margin-bottom: 1em;
 				color: #333;
-				border-bottom: 2px solid #667eea;
+				border-bottom: 2px solid #60a5fa;
 				padding-bottom: 0.5em;
 			}
 			
@@ -146,7 +146,7 @@
 				padding: 1.5em;
 				border-radius: 8px;
 				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-				border-left: 4px solid #667eea;
+				border-left: 4px solid #60a5fa;
 			}
 			
 			.feature-title {
@@ -165,11 +165,17 @@
 			
 			.testimonial {
 				background: white;
-				padding: 1.5em;
-				margin: 1em 0;
-				border-radius: 8px;
-				border-left: 4px solid #667eea;
-				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+				padding: 2em;
+				margin: 1.5em 0;
+				border-radius: 12px;
+				border-left: 4px solid #60a5fa;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+				transition: transform 0.2s, box-shadow 0.2s;
+			}
+			
+			.testimonial:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 			}
 			
 			.testimonial-text {
@@ -180,7 +186,7 @@
 			
 			.testimonial-author {
 				font-weight: bold;
-				color: #667eea;
+				color: #60a5fa;
 			}
 			
 			.authors-section {
@@ -193,11 +199,18 @@
 			
 			.author-card {
 				display: flex;
-				align-items: flex-start;
+				align-items: center;
 				margin: 2em 0;
-				padding: 1.5em;
+				padding: 2em;
 				border: 1px solid #e0e0e0;
-				border-radius: 8px;
+				border-radius: 12px;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+				transition: transform 0.2s, box-shadow 0.2s;
+			}
+			
+			.author-card:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 			}
 			
 			.author-photo {
@@ -223,9 +236,9 @@
 				text-align: center;
 				margin: 3em 0;
 				padding: 2em;
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
 				color: white;
-				border-radius: 8px;
+				border-radius: 12px;
 			}
 			
 			.cta-button {
@@ -243,6 +256,7 @@
 			.cta-button:hover {
 				transform: translateY(-2px);
 				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+				background: #60a5fa !important;
 			}
 
 			@media screen and (max-width: 768px) {
@@ -277,11 +291,11 @@
 			
 			/* New sections styling */
 			.bonus-section {
-				background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+				background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
 				color: white;
 				padding: 3em 2em;
 				margin: 3em 0;
-				border-radius: 8px;
+				border-radius: 12px;
 				text-align: center;
 			}
 			
@@ -325,7 +339,7 @@
 				padding: 1.5em;
 				background: #f8f9fa;
 				border-radius: 8px;
-				border-left: 4px solid #667eea;
+				border-left: 4px solid #60a5fa;
 				transition: transform 0.2s;
 			}
 			
@@ -366,11 +380,11 @@
 			}
 			
 			.purchase-formats {
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
 				color: white;
 				padding: 3em 2em;
 				margin: 3em 0;
-				border-radius: 8px;
+				border-radius: 12px;
 				text-align: center;
 			}
 			
@@ -541,30 +555,16 @@
 					
 					<div class="testimonial">
 						<div class="testimonial-text">
-							"This book is a game-changer for anyone looking to understand and implement GenAI in their business. The frameworks are practical and immediately applicable. The authors have done an exceptional job of making complex concepts accessible."
+							"This book is a game-changer for anyone looking to understand and implement GenAI in their business. The frameworks are practical and immediately applicable."
 						</div>
 						<div class="testimonial-author">— Dr. Sarah Johnson, Chief Innovation Officer, TechCorp Inc.</div>
 					</div>
 					
 					<div class="testimonial">
 						<div class="testimonial-text">
-							"Finally, a book that bridges the gap between AI theory and business practice. The RAG and agentic systems chapters alone are worth the price of admission. Essential reading for business leaders in the AI era."
+							"Finally, a book that bridges the gap between AI theory and business practice. Essential reading for business leaders in the AI era."
 						</div>
 						<div class="testimonial-author">— Michael Rodriguez, CEO, DataStrategy Solutions</div>
-					</div>
-					
-					<div class="testimonial">
-						<div class="testimonial-text">
-							"The prompt engineering techniques and real-world case studies in this book have transformed how our team approaches AI implementation. Clear, actionable, and immediately valuable."
-						</div>
-						<div class="testimonial-author">— Jennifer Liu, VP of Digital Transformation, Global Finance Corp</div>
-					</div>
-					
-					<div class="testimonial">
-						<div class="testimonial-text">
-							"As someone who's been following the GenAI space closely, I can say this book provides the most comprehensive and practical guide I've seen. The section on challenges and solutions is particularly insightful."
-						</div>
-						<div class="testimonial-author">— Prof. David Chen, Stanford Graduate School of Business</div>
 					</div>
 				</div>
 
@@ -595,150 +595,62 @@
 
 				<!-- What You'll Learn Section -->
 				<div class="learning-outcomes">
-					<h2>🎓 10 Things This Book Will Teach You</h2>
+					<h2>🎓 What You'll Learn & FAQ</h2>
 					<p>Master the essential skills and knowledge to successfully implement GenAI in your business:</p>
 					<div class="outcomes-grid">
 						<div class="outcome-item">
-							<strong>1. Design RAG systems from scratch</strong> - Build retrieval-augmented generation systems that work with your data
+							<strong>Design RAG systems</strong> - Build retrieval-augmented generation systems that work with your data
 						</div>
 						<div class="outcome-item">
-							<strong>2. Master prompt engineering techniques</strong> - Create prompts that consistently deliver the results you need
+							<strong>Master prompt engineering</strong> - Create prompts that consistently deliver results
 						</div>
 						<div class="outcome-item">
-							<strong>3. Choose between single vs. multi-agent systems</strong> - Understand when to use each approach for maximum effectiveness
+							<strong>Choose agent systems</strong> - Understand single vs. multi-agent approaches
 						</div>
 						<div class="outcome-item">
-							<strong>4. Implement fine-tuning strategies</strong> - Customize large language models for your specific business needs
+							<strong>Implement fine-tuning</strong> - Customize models for your business needs
 						</div>
 						<div class="outcome-item">
-							<strong>5. Navigate data privacy and security</strong> - Protect sensitive information while leveraging AI capabilities
+							<strong>Navigate privacy & security</strong> - Protect sensitive information while leveraging AI
 						</div>
 						<div class="outcome-item">
-							<strong>6. Mitigate hallucination and bias</strong> - Build reliable AI systems that produce trustworthy outputs
+							<strong>Mitigate AI risks</strong> - Build reliable systems that produce trustworthy outputs
 						</div>
-						<div class="outcome-item">
-							<strong>7. Evaluate and benchmark AI performance</strong> - Measure success and continuously improve your AI implementations
-						</div>
-						<div class="outcome-item">
-							<strong>8. Design organizational transformation</strong> - Lead successful AI adoption across your company
-						</div>
-						<div class="outcome-item">
-							<strong>9. Handle engineering and operations</strong> - Deploy and maintain AI systems at scale
-						</div>
-						<div class="outcome-item">
-							<strong>10. Understand the full AI landscape</strong> - From transformers to diffusion models, grasp the complete picture
+					</div>
+					
+					<div style="margin-top: 3em;">
+						<h3 style="margin-bottom: 1.5em; color: #60a5fa;">❓ Common Questions</h3>
+						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5em;">
+							<div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px;">
+								<h4 style="margin: 0 0 0.5em 0; color: #333;">Need technical background?</h4>
+								<p style="margin: 0; color: #666; font-size: 0.9em;">No! Written for business professionals with clear, practical examples.</p>
+							</div>
+							<div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px;">
+								<h4 style="margin: 0 0 0.5em 0; color: #333;">Suitable for beginners?</h4>
+								<p style="margin: 0; color: #666; font-size: 0.9em;">Absolutely. We start with basics and build to advanced applications.</p>
+							</div>
+							<div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px;">
+								<h4 style="margin: 0 0 0.5em 0; color: #333;">How quickly can I implement?</h4>
+								<p style="margin: 0; color: #666; font-size: 0.9em;">Basic techniques immediately, complex systems within weeks.</p>
+							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- Key Features -->
-				<div class="features-grid">
-					<div class="feature-card">
-						<div class="feature-title">🎯 Practical Frameworks</div>
-						<p>Learn proven frameworks for prompt engineering, RAG systems, and agentic AI that you can implement immediately in your business.</p>
-					</div>
-					
-					<div class="feature-card">
-						<div class="feature-title">🛠️ Technical Deep Dives</div>
-						<p>Understand the architecture behind transformers, diffusion models, and the evolution from LLMs to conversational AI.</p>
-					</div>
-					
-					<div class="feature-card">
-						<div class="feature-title">🏢 Business Applications</div>
-						<p>Explore real-world use cases and learn how to customize GenAI solutions for your specific industry and business needs.</p>
-					</div>
-					
-					<div class="feature-card">
-						<div class="feature-title">⚖️ Challenges & Solutions</div>
-						<p>Navigate the complexities of data privacy, hallucination mitigation, and organizational transformation with confidence.</p>
-					</div>
-				</div>
 
 				<!-- Excerpt Section -->
 				<div class="book-description" id="excerpt">
-					<h2 class="section-title">📄 Read an Excerpt: Chapter 1 - Introduction</h2>
-					<div style="background: #f8f9fa; padding: 2em; border-radius: 8px; border-left: 4px solid #667eea; font-style: italic; line-height: 1.6;">
-						<h4>1.1 Overview of Generative AI</h4>
-						<p><strong>What is Generative AI?</strong></p>
-						<p>Generative Artificial Intelligence represents a paradigm shift in how we think about and interact with technology. Unlike traditional AI systems that are designed to recognize patterns or make predictions, generative AI creates new content—whether that's text, images, code, or other forms of data.</p>
-						
-						<p>At its core, generative AI learns from vast amounts of existing data to understand patterns, structures, and relationships, then uses this understanding to generate novel outputs that didn't exist in its training data. This capability has profound implications for business, as it enables automation of creative and analytical tasks that were previously thought to require human intelligence.</p>
-						
-						<p><strong>What's Different about Generative AI?</strong></p>
-						<p>The distinction between generative AI and previous AI technologies is fundamental. Traditional AI systems were primarily discriminative—they could classify, predict, or optimize based on existing data. Generative AI, however, is creative in nature. It doesn't just analyze what exists; it creates what could be.</p>
-						
-						<p>This shift from analysis to creation opens up entirely new possibilities for business applications...</p>
-						
-						<div style="text-align: center; margin-top: 2em;">
-							<a href="https://amazon.com/dp/PLACEHOLDER" class="cta-button" style="background: #667eea; color: white;">
-								<span class="prelaunch-badge">Pre-order</span>
-								Continue Reading - Get the Full Book
-							</a>
-						</div>
+					<h2 class="section-title">📄 Read an Excerpt</h2>
+					<div style="background: #f8f9fa; padding: 2em; border-radius: 8px; text-align: center;">
+						<p style="font-size: 1.1em; margin-bottom: 1.5em;">Want to preview the book before purchasing?</p>
+						<p style="margin-bottom: 2em;">Read the first chapter and browse the full table of contents on our Kindle Direct Publishing page.</p>
+						<a href="https://kdp.amazon.com/PLACEHOLDER" class="cta-button" style="background: #60a5fa; color: white; text-decoration: none;">
+							📖 Preview on KDP
+						</a>
 					</div>
 				</div>
 
-				<!-- FAQ Section -->
-				<div class="faq-section">
-					<h2>❓ Frequently Asked Questions</h2>
-					
-					<div class="faq-item">
-						<h4>Do I need a technical background to understand this book?</h4>
-						<p>No! This book is specifically written for business professionals. While we cover technical concepts, they're explained in clear, business-friendly language with practical examples.</p>
-					</div>
-					
-					<div class="faq-item">
-						<h4>Is this book suitable for beginners to AI?</h4>
-						<p>Absolutely. We start with foundational concepts and build up to advanced applications. Whether you're new to AI or looking to deepen your understanding, this book meets you where you are.</p>
-					</div>
-					
-					<div class="faq-item">
-						<h4>How is this different from other AI books?</h4>
-						<p>Most AI books focus on either pure theory or deep technical implementation. This book bridges that gap with a business focus, providing frameworks you can actually use in your organization.</p>
-					</div>
-					
-					<div class="faq-item">
-						<h4>Will the techniques work for my industry?</h4>
-						<p>Yes! The frameworks and techniques are designed to be industry-agnostic. We provide specific examples across various sectors and show how to adapt the approaches to your unique context.</p>
-					</div>
-					
-					<div class="faq-item">
-						<h4>How quickly can I start implementing what I learn?</h4>
-						<p>You can begin applying basic prompt engineering techniques immediately. More complex implementations like RAG systems may take a few weeks to set up, but we provide step-by-step guidance.</p>
-					</div>
-					
-					<div class="faq-item">
-						<h4>Do you cover the latest AI developments?</h4>
-						<p>Yes! This book includes the most current approaches including advanced RAG techniques, multi-agent systems, and the latest in fine-tuning methodologies as of 2024.</p>
-					</div>
-				</div>
 
-				<!-- Table of Contents -->
-				<div class="toc-section">
-					<h2 class="toc-title">📚 Table of Contents</h2>
-					<div class="toc-content">CONTENTS
-
-PART I: OVERVIEW
-
-1. Introduction
-2. Architecture
-
-PART II: GENAI TECHNIQUES
-
-3. Prompt Engineering Basics
-4. Prompt Engineering Techniques  
-5. Retrieval Augmented Generation (RAG)
-6. RAG Techniques and Evaluations
-7. Single-Agent Systems
-8. Multi-Agent Systems
-9. Fine-tuning
-
-PART III: CHALLENGES AND SOLUTIONS
-
-10. Challenges in Adopting Generative AI
-11. Engineering and Operations
-12. Organising for Generative-AI Success</div>
-				</div>
 
 				<!-- Purchase Options -->
 				<div class="purchase-formats">
