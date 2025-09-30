@@ -5,747 +5,999 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Generative AI for Business: Frameworks, Tools, and Use Cases - GenAI4All</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-		<style>
-			.book-container {
-				max-width: 1200px;
-				margin: 0 auto;
-				padding: 2em;
-			}
-			
-			.book-hero {
-				text-align: center;
+  <head>
+    <title>Generative AI for Business: Frameworks, Tools, and Use Cases - GenAI4All</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <style>
+      .book-container {
+        /* max-width: 1200px; */
+        /* margin: 0 auto; */
+        /* padding: 2em 0; */
+      }
+
+      .section-container {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+
+      .book-hero {
+        background: url(images/main-bg.png) no-repeat center;
+        background-size: cover;
+        position: relative;
+        
+        /* text-align: center;
 				margin-bottom: 3em;
 				padding: 3em 0;
 				background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
 				color: white;
-				border-radius: 12px;
-			}
-			
-			.book-title {
-				font-size: 2.5em;
-				font-weight: bold;
-				margin-bottom: 0.5em;
-				line-height: 1.2;
-			}
-			
-			.book-subtitle {
-				font-size: 1.2em;
-				opacity: 0.9;
-				margin-bottom: 1.5em;
-			}
-			
-			.book-cover {
-				width: 300px;
-				height: 400px;
-				margin: 2em auto;
-				background: white;
-				border-radius: 8px;
-				box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				color: #333;
-				font-weight: bold;
-				font-size: 1.1em;
-				text-align: center;
-				padding: 2em;
-			}
-			
-			.purchase-buttons {
-				margin: 2em 0;
-			}
-			
-			.purchase-button {
-				display: inline-block;
-				padding: 1em 2.5em;
-				margin: 0.5em;
-				background: #ff6b35;
-				color: white;
-				text-decoration: none;
-				border-radius: 4px;
-				font-weight: bold;
-				font-size: 1.1em;
-				transition: all 0.3s ease;
-				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-			}
-			
-			.purchase-button:hover {
-				background: #e55a2b;
-				transform: translateY(-2px);
-				box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-			}
-			
-			.purchase-button.secondary {
-				background: transparent;
-				border: 2px solid white;
-			}
-			
-			.purchase-button.secondary:hover {
-				background: white;
-				color: #667eea;
-			}
-			
-			.toc-section {
-				background: #f8f9fa;
-				padding: 2em;
-				border-radius: 8px;
-				margin: 2em 0;
-			}
-			
-			.toc-title {
-				font-size: 2em;
-				margin-bottom: 1em;
-				color: #333;
-				text-align: center;
-			}
-			
-			.toc-content {
-				font-family: 'Courier New', monospace;
-				background: white;
-				padding: 2em;
-				border-radius: 4px;
-				border-left: 4px solid #60a5fa;
-				white-space: pre-line;
-				line-height: 1.6;
-				overflow-x: auto;
-				max-height: 600px;
-				overflow-y: auto;
-			}
-			
-			.book-description {
-				background: white;
-				padding: 2em;
-				border-radius: 8px;
-				margin: 2em 0;
-				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-			}
-			
-			.section-title {
-				font-size: 1.8em;
-				margin-bottom: 1em;
-				color: #333;
-				border-bottom: 2px solid #60a5fa;
-				padding-bottom: 0.5em;
-			}
-			
-			.features-grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-				gap: 2em;
-				margin: 2em 0;
-			}
-			
-			.feature-card {
-				background: white;
-				padding: 1.5em;
-				border-radius: 8px;
-				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-				border-left: 4px solid #60a5fa;
-			}
-			
-			.feature-title {
-				font-size: 1.3em;
-				font-weight: bold;
-				margin-bottom: 0.5em;
-				color: #333;
-			}
-			
-			.testimonials-section {
-				background: #f8f9fa;
-				padding: 2em;
-				border-radius: 8px;
-				margin: 2em 0;
-			}
-			
-			.testimonial {
-				background: white;
-				padding: 2em;
-				margin: 1.5em 0;
-				border-radius: 12px;
-				border-left: 4px solid #60a5fa;
-				box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-				transition: transform 0.2s, box-shadow 0.2s;
-			}
-			
-			.testimonial:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-			}
-			
-			.testimonial-text {
-				font-style: italic;
-				margin-bottom: 1em;
-				line-height: 1.6;
-			}
-			
-			.testimonial-author {
-				font-weight: bold;
-				color: #60a5fa;
-			}
-			
-			.authors-section {
-				background: white;
-				padding: 2em;
-				border-radius: 8px;
-				margin: 2em 0;
-				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-			}
-			
-			.author-card {
-				display: flex;
-				align-items: center;
-				margin: 2em 0;
-				padding: 2em;
-				border: 1px solid #e0e0e0;
-				border-radius: 12px;
-				box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-				transition: transform 0.2s, box-shadow 0.2s;
-			}
-			
-			.author-card:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-			}
-			
-			.author-photo {
-				width: 120px;
-				height: 120px;
-				border-radius: 50%;
-				margin-right: 2em;
-				object-fit: cover;
-				flex-shrink: 0;
-			}
-			
-			.author-info h4 {
-				margin-bottom: 0.5em;
-				color: #333;
-			}
-			
-			.author-info p {
-				line-height: 1.6;
-				margin-bottom: 1em;
-			}
-			
-			.cta-section {
-				text-align: center;
-				margin: 3em 0;
-				padding: 2em;
-				background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
-				color: white;
-				border-radius: 12px;
-			}
-			
-			.cta-button {
-				display: inline-block;
-				padding: 1em 2em;
-				background: white;
-				color: #667eea;
-				text-decoration: none;
-				border-radius: 4px;
-				font-weight: bold;
-				margin: 0.5em;
-				transition: transform 0.2s;
-			}
-			
-			.cta-button:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-				background: #60a5fa !important;
-			}
+				border-radius: 12px; */
+      }
+      
+      .book-hero-content{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+      }
 
-			@media screen and (max-width: 768px) {
-				.book-title {
-					font-size: 2em;
-				}
-				
-				.book-cover {
-					width: 250px;
-					height: 350px;
-				}
-				
-				.toc-content {
-					font-size: 0.9em;
-				}
-				
-				.author-card {
-					flex-direction: column;
-					text-align: center;
-				}
-				
-				.author-photo {
-					margin: 0 auto 1em auto;
-				}
-				
-				.purchase-button {
-					display: block;
-					margin: 1em auto;
-					max-width: 300px;
-				}
-			}
-			
-			/* New sections styling */
-			.bonus-section {
-				background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
-				color: white;
-				padding: 3em 2em;
-				margin: 3em 0;
-				border-radius: 12px;
-				text-align: center;
-			}
-			
-			.bonus-section h2 {
-				color: white;
-				margin-bottom: 1em;
-			}
-			
-			.bonus-section ul {
-				list-style: none;
-				padding: 0;
-				max-width: 600px;
-				margin: 0 auto;
-			}
-			
-			.bonus-section li {
-				background: rgba(255,255,255,0.1);
-				margin: 0.5em 0;
-				padding: 1em;
-				border-radius: 5px;
-				backdrop-filter: blur(10px);
-				font-size: 1.1em;
-			}
-			
-			.learning-outcomes {
-				padding: 3em 2em;
-				margin: 3em 0;
-				background: white;
-				border-radius: 8px;
-				box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-			}
-			
-			.outcomes-grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-				gap: 1.5em;
-				margin-top: 2em;
-			}
-			
-			.outcome-item {
-				padding: 1.5em;
-				background: #f8f9fa;
-				border-radius: 8px;
-				border-left: 4px solid #60a5fa;
-				transition: transform 0.2s;
-			}
-			
-			.outcome-item:hover {
-				transform: translateY(-2px);
-			}
-			
-			.outcome-item strong {
-				color: #667eea;
-				font-size: 1.1em;
-			}
-			
-			.faq-section {
-				background: #f8f9fa;
-				padding: 3em 2em;
-				margin: 3em 0;
-				border-radius: 8px;
-			}
-			
-			.faq-item {
-				background: white;
-				margin: 1em 0;
-				padding: 1.5em;
-				border-radius: 8px;
-				box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-			}
-			
-			.faq-item h4 {
-				margin: 0 0 1em 0;
-				color: #333;
-				font-size: 1.1em;
-			}
-			
-			.faq-item p {
-				margin: 0;
-				color: #666;
-				line-height: 1.6;
-			}
-			
-			.purchase-formats {
-				background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
-				color: white;
-				padding: 3em 2em;
-				margin: 3em 0;
-				border-radius: 12px;
-				text-align: center;
-			}
-			
-			.purchase-formats h2 {
-				color: white;
-				margin-bottom: 2em;
-			}
-			
-			.format-grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-				gap: 2em;
-				max-width: 900px;
-				margin: 0 auto;
-			}
-			
-			.format-card {
-				background: white;
-				color: #333;
-				padding: 2em;
-				border-radius: 8px;
-				box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-				position: relative;
-				transition: transform 0.2s;
-			}
-			
-			.format-card:hover {
-				transform: translateY(-5px);
-			}
-			
-			.format-card.popular::before {
-				content: "🔥 Most Popular";
-				position: absolute;
-				top: -15px;
-				left: 50%;
-				transform: translateX(-50%);
-				background: #f5576c;
-				color: white;
-				padding: 0.5em 1em;
-				border-radius: 20px;
-				font-size: 0.8em;
-				font-weight: bold;
-			}
-			
-			.format-card h4 {
-				margin: 0 0 1em 0;
-				color: #667eea;
-				font-size: 1.3em;
-			}
-			
-			.format-price {
-				font-size: 2em;
-				font-weight: bold;
-				color: #333;
-				margin: 0.5em 0;
-			}
-			
-			.format-features {
-				list-style: none;
-				padding: 0;
-				margin: 1em 0;
-				text-align: left;
-			}
-			
-			.format-features li {
-				padding: 0.25em 0;
-				color: #666;
-			}
-			
-			.format-features li::before {
-				content: "✓ ";
-				color: #28a745;
-				font-weight: bold;
-			}
-			
-			.prelaunch-badge {
-				background: #28a745;
-				color: white;
-				padding: 0.5em 1em;
-				border-radius: 20px;
-				font-size: 0.9em;
-				margin: 0 0.5em;
-				display: inline-block;
-			}
-			
-			@media screen and (max-width: 768px) {
-				.outcomes-grid {
-					grid-template-columns: 1fr;
-				}
-				
-				.format-grid {
-					grid-template-columns: 1fr;
-				}
-				
-				.bonus-section li,
-				.outcome-item,
-				.faq-item {
-					font-size: 0.9em;
-				}
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+      .book-info {
+        flex: 1;
+      }
 
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="container">
-				<li><a href="index.html">
-						<h3>GenAI4All</h3>
-					</a></li>
-				<li><a href="book.html">Book</a></li>
-				<li><a href="course.html">Course</a></li>
-				<li><a href="resources.html">Resources</a></li>
-				<li><a href="about.html">About</a></li>
-			</ul>
-		</nav>
+      .book-title {
+        font-size: 66px;
+        line-height: 1.1em;
+        text-align: center;
+        letter-spacing: 0.1em;
+        font-family: forum, serif;
+        color: #1a2238;
+      }
 
-		<!-- Book Page Content -->
-		<article id="book" class="wrapper style1">
-			<div class="book-container">
-				
-				<!-- Hero Section -->
-				<div class="book-hero">
-					<h1 class="book-title">Generative AI for Business</h1>
-					<p class="book-subtitle">Frameworks, Tools, and Use Cases</p>
-					
-					<div class="book-cover">
-						<div>
-							<div style="font-size: 1.3em; margin-bottom: 1em;">GENERATIVE AI<br>FOR BUSINESS</div>
-							<div style="font-size: 0.9em; margin-bottom: 1em;">Frameworks, Tools, and Use Cases</div>
-							<div style="font-size: 0.8em; opacity: 0.7;">Making GenAI Work for Your Business</div>
-						</div>
-					</div>
-					
-					<div class="purchase-buttons">
-						<a href="https://amazon.com/dp/PLACEHOLDER" class="purchase-button">
-							<span class="prelaunch-badge">Pre-order</span> 
-							📖 Get it on Amazon
-						</a>
-						<a href="#excerpt" class="purchase-button secondary">📄 Read an Excerpt</a>
-					</div>
-				</div>
+      .book-subtitle {
+        font-size: 25px;
+        line-height: 1.4em;
+        text-align: center;
+        font-family: cinzel, serif;
+        letter-spacing: 0.05em;
+        opacity: 0.9;
+        margin-bottom: 1.5em;
+      }
 
-				<!-- Book Description -->
-				<div class="book-description">
-					<h2 class="section-title">About This Book</h2>
-					<p>A comprehensive guide to implementing Generative AI in business contexts. This book bridges the gap between technical possibilities and practical business applications, providing frameworks, tools, and real-world use cases for successfully integrating GenAI into your organization.</p>
-					
-					<p>Written by business professors with extensive experience teaching GenAI to students and professionals, this book reflects our mission to make GenAI accessible and actionable for business leaders, entrepreneurs, and practitioners.</p>
-				</div>
+      .purchase-buttons {
+        margin: 2em 0;
+      }
 
-				<!-- Bonus Materials Section -->
-				<div class="bonus-section">
-					<h2>📦 Free Bonuses When You Buy</h2>
-					<p>Forward your purchase receipt to <strong>bonus@genai4all.com</strong> to receive these exclusive bonuses:</p>
-					<ul>
-						<li>🎯 <strong>GenAI Implementation Checklist</strong> - Step-by-step guide to deploying AI in your organization</li>
-						<li>📊 <strong>RAG System Design Templates</strong> - Ready-to-use templates for building retrieval systems</li>
-						<li>⚡ <strong>Prompt Engineering Cheat Sheet</strong> - Quick reference for effective prompt crafting</li>
-						<li>🔧 <strong>AI Tool Evaluation Framework</strong> - Compare and select the right AI tools for your needs</li>
-						<li>📺 <strong>Exclusive Video Walkthrough</strong> - 30-minute deep dive with the authors</li>
-					</ul>
-				</div>
+      .purchase-button {
+        height: 69px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        margin: 0.5em;
+        background: #1a2238;
+        font-family: cinzel, serif;
+        white-space: nowrap;
+        color: white;
+        text-decoration: none;
+        border-radius: 69px;
+        font-size: 1.4em;
+        transition: all 0.3s ease;
+        /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+      }
 
-				<!-- Testimonials -->
-				<div class="testimonials-section">
-					<h2 class="section-title">What Readers Are Saying</h2>
-					
-					<div class="testimonial">
-						<div class="testimonial-text">
-							"This book is a game-changer for anyone looking to understand and implement GenAI in their business. The frameworks are practical and immediately applicable."
-						</div>
-						<div class="testimonial-author">— Dr. Sarah Johnson, Chief Innovation Officer, TechCorp Inc.</div>
-					</div>
-					
-					<div class="testimonial">
-						<div class="testimonial-text">
-							"Finally, a book that bridges the gap between AI theory and business practice. Essential reading for business leaders in the AI era."
-						</div>
-						<div class="testimonial-author">— Michael Rodriguez, CEO, DataStrategy Solutions</div>
-					</div>
-				</div>
+      .purchase-button:hover {
+        /* background: #e55a2b; */
+        transform: translateY(-2px);
+        color: #fff !important;
+        /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); */
+      }
 
-				<!-- About the Authors -->
-				<div class="authors-section">
-					<h2 class="section-title">About the Authors</h2>
-					
-					<div class="author-card">
-						<img src="images/weichen.jpg" alt="Wei Chen" class="author-photo">
-						<div class="author-info">
-							<h4>Wei Chen</h4>
-							<p><strong>Associate Professor, University of Connecticut</strong></p>
-							<p>Wei Chen is an Associate Professor of Operations and Information Management (OPIM) at the School of Business, University of Connecticut, and academic director of the UConn Digital Frontiers Initiative. His current research focuses on the design and governance of generative AI.</p>
-							<p>Wei's work on Platforms, Crowds, and Financial Technologies (FinTech) has been published in leading academic journals, such as <em>Management Science</em>, <em>Information Systems Research</em>, and <em>MIS Quarterly</em>. He teaches OPIM 5515 Generative AI for Business in the graduate programs at UConn School of Business to MS BAPM, MS FinTech, and MBA students.</p>
-						</div>
-					</div>
-					
-					<div class="author-card">
-						<img src="images/liweichen.png" alt="Liwei Chen" class="author-photo">
-						<div class="author-info">
-							<h4>Liwei Chen</h4>
-							<p><strong>Associate Professor, University of Cincinnati</strong></p>
-							<p>Liwei Chen is an Associate Professor in the Department of Operations, Business Analytics, and Information Systems at the Carl H. Lindner College of Business at the University of Cincinnati. Liwei's research focuses on the empowering roles of IT in healthcare and business contexts.</p>
-							<p>She has published in leading academic journals such as <em>MIS Quarterly</em>, <em>Information Systems Research</em>, <em>Journal of the Association for Information Systems</em>, <em>European Journal of Information Systems</em>, and <em>Journal of Medical Internet Research</em>. She teaches Generative AI for Business in the graduate programs at Lindner College of Business.</p>
-						</div>
-					</div>
-				</div>
+      .purchase-button.secondary {
+        background: transparent;
+        color: #000;
+        /* border: 2px solid white; */
+      }
 
-				<!-- What You'll Learn Section -->
-				<div class="learning-outcomes">
-					<h2>🎓 What You'll Learn & FAQ</h2>
-					<p>Master the essential skills and knowledge to successfully implement GenAI in your business:</p>
-					<div class="outcomes-grid">
-						<div class="outcome-item">
-							<strong>Design RAG systems</strong> - Build retrieval-augmented generation systems that work with your data
-						</div>
-						<div class="outcome-item">
-							<strong>Master prompt engineering</strong> - Create prompts that consistently deliver results
-						</div>
-						<div class="outcome-item">
-							<strong>Choose agent systems</strong> - Understand single vs. multi-agent approaches
-						</div>
-						<div class="outcome-item">
-							<strong>Implement fine-tuning</strong> - Customize models for your business needs
-						</div>
-						<div class="outcome-item">
-							<strong>Navigate privacy & security</strong> - Protect sensitive information while leveraging AI
-						</div>
-						<div class="outcome-item">
-							<strong>Mitigate AI risks</strong> - Build reliable systems that produce trustworthy outputs
-						</div>
-					</div>
-					
-					<div style="margin-top: 3em;">
-						<h3 style="margin-bottom: 1.5em; color: #60a5fa;">❓ Common Questions</h3>
-						<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5em;">
-							<div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px;">
-								<h4 style="margin: 0 0 0.5em 0; color: #333;">Need technical background?</h4>
-								<p style="margin: 0; color: #666; font-size: 0.9em;">No! Written for business professionals with clear, practical examples.</p>
-							</div>
-							<div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px;">
-								<h4 style="margin: 0 0 0.5em 0; color: #333;">Suitable for beginners?</h4>
-								<p style="margin: 0; color: #666; font-size: 0.9em;">Absolutely. We start with basics and build to advanced applications.</p>
-							</div>
-							<div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px;">
-								<h4 style="margin: 0 0 0.5em 0; color: #333;">How quickly can I implement?</h4>
-								<p style="margin: 0; color: #666; font-size: 0.9em;">Basic techniques immediately, complex systems within weeks.</p>
-							</div>
-						</div>
-					</div>
-				</div>
+      .purchase-button.secondary:hover {
+        /* background: white; */
+        color: #60a5fa !important;
+      }
 
+      .prelaunch-badge {
+        background: #28a745;
+        color: white;
+        padding: 0.4em 0.9em;
+        border-radius: 20px;
+        font-size: 0.7em;
+        line-height: 1;
+        white-space: nowrap;
+      }
 
-				<!-- Excerpt Section -->
-				<div class="book-description" id="excerpt">
-					<h2 class="section-title">📄 Read an Excerpt</h2>
-					<div style="background: #f8f9fa; padding: 2em; border-radius: 8px; text-align: center;">
-						<p style="font-size: 1.1em; margin-bottom: 1.5em;">Want to preview the book before purchasing?</p>
-						<p style="margin-bottom: 2em;">Read the first chapter and browse the full table of contents on our Kindle Direct Publishing page.</p>
-						<a href="https://kdp.amazon.com/PLACEHOLDER" class="cta-button" style="background: #60a5fa; color: white; text-decoration: none;">
-							📖 Preview on KDP
-						</a>
-					</div>
-				</div>
+      .book-cover-box {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .book-cover {
+        width: 350px;
+        height: 467px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        color: #333;
+        font-weight: bold;
+        font-size: 1.1em;
+        text-align: center;
+        padding: 2em;
+        /* background: linear-gradient(to bottom,
+            #1f71d8 0%,
+            #29c0ea 35%,
+            #1f71d8 85%,
+            #1a191e 100%); */
+      }
 
 
 
-				<!-- Purchase Options -->
-				<div class="purchase-formats">
-					<h2>📚 Choose Your Format</h2>
-					<div class="format-grid">
-						<div class="format-card">
-							<h4>📖 Hardcover</h4>
-							<div class="format-price">$39.99</div>
-							<ul class="format-features">
-								<li>Physical hardcover book</li>
-								<li>Premium paper quality</li>
-								<li>Perfect for referencing</li>
-								<li>Great for gifts</li>
-							</ul>
-							<a href="https://amazon.com/dp/PLACEHOLDER" class="cta-button">
-								<span class="prelaunch-badge">Pre-order</span> 
-								Order on Amazon
-							</a>
-						</div>
-						
-						<div class="format-card popular">
-							<h4>📚 Complete Bundle</h4>
-							<div class="format-price">$59.99</div>
-							<ul class="format-features">
-								<li>Hardcover + Digital book</li>
-								<li>All bonus materials</li>
-								<li>Video walkthrough</li>
-								<li>Implementation templates</li>
-								<li>Early access to updates</li>
-							</ul>
-							<a href="https://amazon.com/dp/PLACEHOLDER" class="cta-button">
-								<span class="prelaunch-badge">Pre-order</span> 
-								Get Complete Bundle
-							</a>
-						</div>
-						
-						<div class="format-card">
-							<h4>📱 Digital Only</h4>
-							<div class="format-price">$24.99</div>
-							<ul class="format-features">
-								<li>Kindle/eBook format</li>
-								<li>Instant download</li>
-								<li>Searchable text</li>
-								<li>Portable across devices</li>
-							</ul>
-							<a href="https://amazon.com/dp/PLACEHOLDER" class="cta-button">
-								<span class="prelaunch-badge">Pre-order</span> 
-								Get Digital Version
-							</a>
-						</div>
-					</div>
-					
-					<div style="margin-top: 3em; background: rgba(255,255,255,0.1); padding: 2em; border-radius: 8px;">
-						<h3 style="color: white; margin-bottom: 1em;">📬 Get Updates on the Book Release</h3>
-						<p>Stay informed about publication updates, early access opportunities, and related resources.</p>
-						
-						<iframe src="https://embeds.beehiiv.com/794b6821-a119-4557-8f3d-fe37ea2296b4" data-test-id="beehiiv-embed" width="100%"
-							height="160" frameborder="0" scrolling="no"
-							style="border-radius: 4px; border: none; margin: 1em 0; background-color: rgba(255,255,255,0.1);"></iframe>
-						
-						<div style="margin-top: 2em;">
-							<a href="course.html" class="cta-button">Explore Course Materials</a>
-							<a href="resources.html" class="cta-button">Browse AI Tools</a>
-						</div>
-					</div>
-				</div>
 
-			</div>
-		</article>
-		
-		<!-- Footer -->
-		<article id="footer" class="wrapper style1">
-			<footer>
-				<ul id="copyright">
-					<li>&copy; 2024 GenAI4All. All rights reserved.</li>
-				</ul>
-			</footer>
-		</article>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+      .toc-section {
+        background: #f8f9fa;
+        padding: 2em;
+        border-radius: 8px;
+        margin: 2em 0;
+      }
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55384618-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+      .toc-title {
+        font-size: 2em;
+        margin-bottom: 1em;
+        color: #333;
+        text-align: center;
+      }
 
-		  gtag('config', 'UA-55384618-1');
-		</script>
-	</body>
+      .toc-content {
+        font-family: 'Courier New', monospace;
+        background: white;
+        padding: 2em;
+        border-radius: 4px;
+        border-left: 4px solid #60a5fa;
+        white-space: pre-line;
+        line-height: 1.6;
+        overflow-x: auto;
+        max-height: 600px;
+        overflow-y: auto;
+      }
+
+      .book-description {
+        /* background: #fff; */
+        padding: 2em 2em 1px;
+        font-size: 1.1em;
+        font-family: cinzel, serif;
+        /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+      }
+      
+      .book-description-content{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+      
+      .book-description-content>div:first-of-type {
+        flex: 4;
+      }
+      
+      .book-description-content>div:first-of-type img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+      
+      .book-description-content>div:last-of-type {
+        flex: 5;
+      }
+      
+      .book-read {
+        background: #128ba6;
+        color: #fff;
+        padding: 3em;
+        font-size: 1.1em;
+        font-family: cinzel, serif;
+      }
+      
+      .book-read .section-title{
+        color: #fff;
+      }
+
+      .book-read-content {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .book-read-content>div:first-of-type {
+        flex: 5;
+      }
+
+      .book-read-content>div:last-of-type {
+        flex: 4;
+      }
+
+      .book-read-content>div:last-of-type img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+
+      .section-title {
+        font-family: forum, serif;
+        font-size: 1.8em;
+        margin-bottom: 1em;
+        text-align: center;
+        color: #1a2238;
+        /* border-bottom: 2px solid #60a5fa; */
+        padding-bottom: 0.5em;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2em;
+        margin: 2em 0;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 1.5em;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #60a5fa;
+      }
+
+      .feature-title {
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+        color: #333;
+      }
+
+      .testimonials-section {
+        background: #f8f9fa;
+        padding: 3em;
+        border-radius: 8px;
+      }
+
+      .testimonial-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5em;
+      }
+
+      .book-testimonial {
+        flex: 1;
+        background: white;
+        padding: 2em;
+        margin: 1.5em 0;
+        /* border-radius: 12px; */
+        /* border-left: 4px solid #60a5fa; */
+        /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); */
+        /* transition: transform 0.2s, box-shadow 0.2s; */
+      }
+
+      .book-testimonial:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 1em;
+        line-height: 1.6;
+        font-size: 1.4rem;
+      }
+
+      .testimonial-author {
+        font-weight: bold;
+        font-size: 1rem;
+        /* color: #60a5fa; */
+      }
+
+      .authors-section {
+        background: #128ba6;
+        padding: 3em;
+        color: #fff;
+      }
+      
+      .authors-section .section-title{
+        color: #fff;
+      }
+
+      .author-card {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+        margin: 2em 0;
+        padding: 2em;
+        /* border: 1px solid #e0e0e0; */
+        /* border-radius: 12px; */
+        /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); */
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .author-card:hover {
+        transform: translateY(-2px);
+        /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); */
+      }
+
+      .author-photo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .author-info h4 {
+        font-family: forum, serif;
+        margin-bottom: 0.5em;
+        color: #fff;
+        font-size: 1.5rem;
+      }
+
+      .author-info h4 span {
+        padding: 10px 4px;
+        display: inline-block;
+        border-bottom: 2px solid #fff;
+      }
+
+      .author-info p {
+        font-family: cinzel, serif;
+        line-height: 1.6;
+        margin-bottom: 1em;
+      }
+      .author-info p strong{
+        color: #fff;
+      }
+
+      .cta-section {
+        text-align: center;
+        margin: 3em 0;
+        padding: 2em;
+        background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
+        color: white;
+        border-radius: 12px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 1em 2em;
+        background: white;
+        color: #128ba6 !important;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+        margin: 0.5em 0;
+        transition: transform 0.2s;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        color: #128ba6;
+        /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+      }
+
+      .purchase-item-button {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        padding: .5rem 1rem;
+        background: white;
+        color: #fff !important;
+        text-decoration: none;
+        border-radius: 69px;
+        font-weight: bold;
+        font-size: 1rem;
+        margin: 0.5em 0;
+        transition: transform 0.2s;
+        background-color: #1a2238;
+        white-space: nowrap;
+      }
+
+      .purchase-item-button:hover {
+        transform: translateY(-2px);
+        /* background-color: #e55a2b; */
+        color: #fff !important;
+        /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+      }
+
+      @media screen and (max-width: 768px) {
+        .book-title {
+          font-size: 2em;
+        }
+
+        .book-cover {
+          width: 250px;
+          height: 350px;
+        }
+
+        .toc-content {
+          font-size: 0.9em;
+        }
+
+        .author-card {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .author-photo {
+          margin: 0 auto 1em auto;
+        }
+      }
+
+      /* New sections styling */
+      .bonus-section {
+        background: #1a2238;
+        padding: 3em 2em;
+        margin: 3em 0 0;
+        text-align: center;
+        font-family: cinzel, serif;
+      }
+      
+      .bonus-section .section-title, .bonus-section p{
+        color: #fff!important;
+      }
+      
+      .bonus-section p strong{
+        color: #128ba6;
+      }
+
+      .bonus-section ul {
+        list-style: none;
+        padding: 0;
+        max-width: 600px;
+        margin: 0 auto;
+        /* display: flex; */
+        /* justify-content: space-between; */
+      }
+
+      .bonus-section li {
+        background: #fff;
+        margin: 0.5em 0;
+        padding: 1em;
+        border-radius: 5px;
+        backdrop-filter: blur(10px);
+        font-size: 1.1em;
+      }
+      
+      .bonus-section li strong{
+        color: #128ba6;
+      }
+
+      .learning-outcomes {
+        padding: 3em 2em;
+        background: white;
+        font-family: cinzel, serif;
+      }
+
+      .outcomes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5em;
+        margin-top: 2em;
+      }
+
+      .outcome-item {
+        padding: 1.5em;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #60a5fa;
+        transition: transform 0.2s;
+      }
+
+      .outcome-item:hover {
+        transform: translateY(-2px);
+      }
+
+      .outcome-item strong {
+        color: #667eea;
+        font-size: 1.1em;
+      }
+
+      .faq-section {
+        background: #f8f9fa;
+        padding: 3em 2em;
+        margin: 3em 0;
+        border-radius: 8px;
+      }
+
+      .faq-item {
+        background: white;
+        margin: 1em 0;
+        padding: 1.5em;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .faq-item h4 {
+        margin: 0 0 1em 0;
+        color: #333;
+        font-size: 1.1em;
+      }
+
+      .faq-item p {
+        margin: 0;
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .purchase-formats {
+        /* background: #c5e6f4; */
+        padding: 3em 2em;
+        text-align: center;
+      }
+
+      .format-grid {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2em;
+      }
+
+      .format-card {
+        background: white;
+        color: #333;
+        padding: 2em;
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+        transition: transform 0.2s;
+      }
+
+      .format-card:hover {
+        background-color: #128ba6;
+        color: #fff!important;
+        transform: translateY(-5px);
+      }
+      .format-card:hover h4{
+        color: #fff;
+      }
+
+      .format-card.popular::before {
+        content: "🔥 Most Popular";
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #f5576c;
+        color: white;
+        padding: 0.5em 1em;
+        border-radius: 20px;
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+
+      .format-card h4 {
+        color: #128ba6;
+        margin: 0 0 1em 0;
+        font-size: 1.3em;
+      }
+
+      .format-price {
+        font-size: 2.4em;
+        font-weight: bold;
+        margin: 0.5em 0;
+      }
+
+      .format-features {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0 3rem;
+        text-align: left;
+      }
+
+      .format-features li {
+        padding: 0.25em 0;
+        font-family: cinzel, serif;
+      }
+
+      .format-features li::before {
+        content: "✓ ";
+        color: #28a745;
+        font-weight: bold;
+      }
+
+      .book-update {
+        font-family: cinzel, serif;
+        margin-top: 3em;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 2em;
+        border-radius: 8px;
+      }
+
+      .book-update h3 {
+        font-family: forum, serif;
+        margin-bottom: 1rem;
+      }
+
+      .book-update-footer {
+        margin-top: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .book-update-footer a {
+        width: 250px;
+      }
+
+
+
+      @media screen and (max-width: 768px) {
+        .outcomes-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .format-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .bonus-section li,
+        .outcome-item,
+        .faq-item {
+          font-size: 0.9em;
+        }
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="index.html">
+            <h3>GenAI4All</h3>
+          </a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="course.html">Course</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <!-- Book Page Content -->
+    <article id="book" class="style1">
+      <div class="book-container">
+
+        <!-- Hero Section -->
+        <div class="book-hero">
+          <div class="section-container">
+            <div class="book-hero-content">
+              <div class="book-info">
+                <h1 class="book-title">Generative AI for Business</h1>
+                <p class="book-subtitle">Frameworks, Tools, and Use Cases</p>
+                <div class="purchase-buttons">
+                  <a href="https://amazon.com/dp/PLACEHOLDER" class="purchase-button">
+                    <span class="prelaunch-badge">Pre-order</span>
+                    <span>Get it on Amazon</span>
+                  </a>
+                  <a href="#excerpt" class="purchase-button secondary">Read an Excerpt</a>
+                </div>
+              </div>
+              <div class="book-cover-box">
+                <div class="book-cover">
+                  <div></div>
+                  <div>
+                    <div style="font-size: 2.5em; margin-bottom: .6em; line-height: 0.9;">GENERATIVE AI FOR<br>BUSINESS
+                    </div>
+                    <div style="font-size: 1em; margin-bottom: 1em; line-height: 1.2;color: #444d50;">Frameworks,
+                      Tools,<br />and Use Cases</div>
+                  </div>
+                  <div style="font-size: 1.4em; ">Making GenAI<br />Work for Your Business</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book Description -->
+        <div class="book-description">
+          <div class="section-container">
+            <div class="book-description-content">
+              <div>
+                <img src="images/weichen.jpg" />
+              </div>
+              <div>
+                <h2 class="section-title">About This Book</h2>
+                <p>A comprehensive guide to implementing Generative AI in business contexts. This book bridges the gap
+                  between
+                  technical possibilities and practical business applications, providing frameworks, tools, and real-world
+                  use
+                  cases for successfully integrating GenAI into your organization.</p>
+                
+                <p>Written by business professors with extensive experience teaching GenAI to students and professionals,
+                  this
+                  book reflects our mission to make GenAI accessible and actionable for business leaders, entrepreneurs, and
+                  practitioners.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bonus Materials Section -->
+        <div class="bonus-section">
+          <div class="section-container">
+            <h2 class="section-title">Free Bonuses When You Buy</h2>
+            <p>Forward your purchase receipt to <strong>bonus@genai4all.com</strong> to receive these exclusive bonuses:
+            </p>
+            <ul>
+              <li>🎯 <strong>GenAI Implementation Checklist</strong> - Step-by-step guide to deploying AI in your
+                organization</li>
+              <li>📊 <strong>RAG System Design Templates</strong> - Ready-to-use templates for building retrieval
+                systems
+              </li>
+              <li>⚡ <strong>Prompt Engineering Cheat Sheet</strong> - Quick reference for effective prompt crafting</li>
+              <li>🔧 <strong>AI Tool Evaluation Framework</strong> - Compare and select the right AI tools for your
+                needs
+              </li>
+              <li>📺 <strong>Exclusive Video Walkthrough</strong> - 30-minute deep dive with the authors</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials-section">
+          <div class="section-container">
+            <h2 class="section-title">What Readers Are Saying</h2>
+            <div class="testimonial-list">
+              <div class="book-testimonial">
+                <div class="testimonial-text">
+                  "This book is a game-changer for anyone looking to understand and implement GenAI in their business.
+                  The
+                  frameworks are practical and immediately applicable."
+                </div>
+                <div class="testimonial-author">— Dr. Sarah Johnson, Chief Innovation Officer, TechCorp Inc.</div>
+              </div>
+
+              <div class="book-testimonial">
+                <div class="testimonial-text">
+                  "Finally, a book that bridges the gap between AI theory and business practice. Essential reading for
+                  business leaders in the AI era."
+                </div>
+                <div class="testimonial-author">— Michael Rodriguez, CEO, DataStrategy Solutions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About the Authors -->
+        <div class="authors-section">
+          <div class="section-container">
+            <h2 class="section-title">About the Authors</h2>
+
+            <div class="author-card">
+              <img src="images/weichen.jpg" alt="Wei Chen" class="author-photo">
+              <div class="author-info">
+                <h4><span>Wei Chen</span></h4>
+                <p><strong>Associate Professor, University of Connecticut</strong></p>
+                <p>Wei Chen is an Associate Professor of Operations and Information Management (OPIM) at the School of
+                  Business, University of Connecticut, and academic director of the UConn Digital Frontiers Initiative.
+                  His current research focuses on the design and governance of generative AI.</p>
+                <p>Wei's work on Platforms, Crowds, and Financial Technologies (FinTech) has been published in leading
+                  academic journals, such as <em>Management Science</em>, <em>Information Systems Research</em>, and
+                  <em>MIS Quarterly</em>. He teaches OPIM 5515 Generative AI for Business in the graduate programs at
+                  UConn School of Business to MS BAPM, MS FinTech, and MBA students.
+                </p>
+              </div>
+            </div>
+
+            <div class="author-card">
+              <div class="author-info">
+                <h4><span>Liwei Chen</span></h4>
+                <p><strong>Associate Professor, University of Cincinnati</strong></p>
+                <p>Liwei Chen is an Associate Professor in the Department of Operations, Business Analytics, and
+                  Information Systems at the Carl H. Lindner College of Business at the University of Cincinnati.
+                  Liwei's
+                  research focuses on the empowering roles of IT in healthcare and business contexts.</p>
+                <p>She has published in leading academic journals such as <em>MIS Quarterly</em>, <em>Information
+                    Systems
+                    Research</em>, <em>Journal of the Association for Information Systems</em>, <em>European Journal of
+                    Information Systems</em>, and <em>Journal of Medical Internet Research</em>. She teaches Generative
+                  AI
+                  for Business in the graduate programs at Lindner College of Business.</p>
+              </div>
+              <img src="images/liweichen.png" alt="Liwei Chen" class="author-photo">
+            </div>
+          </div>
+        </div>
+
+        <!-- What You'll Learn Section -->
+        <div class="learning-outcomes">
+          <div class="section-container">
+            <h2 class="section-title">What You'll Learn & FAQ</h2>
+            <p>Master the essential skills and knowledge to successfully implement GenAI in your business:</p>
+            <div class="outcomes-grid">
+              <div class="outcome-item">
+                <strong>Design RAG systems</strong> - Build retrieval-augmented generation systems that work with your
+                data
+              </div>
+              <div class="outcome-item">
+                <strong>Master prompt engineering</strong> - Create prompts that consistently deliver results
+              </div>
+              <div class="outcome-item">
+                <strong>Choose agent systems</strong> - Understand single vs. multi-agent approaches
+              </div>
+              <div class="outcome-item">
+                <strong>Implement fine-tuning</strong> - Customize models for your business needs
+              </div>
+              <div class="outcome-item">
+                <strong>Navigate privacy & security</strong> - Protect sensitive information while leveraging AI
+              </div>
+              <div class="outcome-item">
+                <strong>Mitigate AI risks</strong> - Build reliable systems that produce trustworthy outputs
+              </div>
+            </div>
+
+            <div style="margin-top: 3em;">
+              <h3 style="margin-bottom: 1.5em; color: #60a5fa;">❓ Common Questions</h3>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5em;">
+                <div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px;">
+                  <h4 style="margin: 0 0 0.5em 0; color: #333;">Need technical background?</h4>
+                  <p style="margin: 0; color: #666; font-size: 0.9em;">No! Written for business professionals with
+                    clear,
+                    practical examples.</p>
+                </div>
+                <div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px;">
+                  <h4 style="margin: 0 0 0.5em 0; color: #333;">Suitable for beginners?</h4>
+                  <p style="margin: 0; color: #666; font-size: 0.9em;">Absolutely. We start with basics and build to
+                    advanced applications.</p>
+                </div>
+                <div style="background: #f8f9fa; padding: 1.5em; border-radius: 8px;">
+                  <h4 style="margin: 0 0 0.5em 0; color: #333;">How quickly can I implement?</h4>
+                  <p style="margin: 0; color: #666; font-size: 0.9em;">Basic techniques immediately, complex systems
+                    within weeks.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Excerpt Section -->
+        <div class="book-read" id="excerpt">
+          <div class="section-container">
+            <div class="book-read-content">
+              <div class="">
+                <h2 class="section-title">Read an Excerpt</h2>
+                <div style="text-align: center;">
+                  <p style="font-size: 1.1em; margin-bottom: 1.5em;">Want to preview the book before purchasing?</p>
+                  <p style="margin-bottom: 2em;">Read the first chapter and browse the full table of contents on our
+                    Kindle
+                    Direct Publishing page.</p>
+                  <a href="https://kdp.amazon.com/PLACEHOLDER" class="cta-button">
+                    Preview on KDP
+                  </a>
+                </div>
+              </div>
+              <div class="">
+                <img src="images/weichen.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Purchase Options -->
+        <div class="purchase-formats">
+          <div class="section-container">
+            <h2 class="section-title">Choose Your Format</h2>
+            <div class="format-grid">
+              <div class="format-card">
+                <h4>Hardcover</h4>
+                <div class="format-price">$39.99</div>
+                <ul class="format-features">
+                  <li>Physical hardcover book</li>
+                  <li>Premium paper quality</li>
+                  <li>Perfect for referencing</li>
+                  <li>Great for gifts</li>
+                </ul>
+                <a href="https://amazon.com/dp/PLACEHOLDER" class="purchase-item-button">
+                  <span class="prelaunch-badge">Pre-order</span>
+                  Order on Amazon
+                </a>
+              </div>
+
+              <div class="format-card popular">
+                <h4>Complete Bundle</h4>
+                <div class="format-price">$59.99</div>
+                <ul class="format-features">
+                  <li>Hardcover + Digital book</li>
+                  <li>All bonus materials</li>
+                  <li>Video walkthrough</li>
+                  <li>Implementation templates</li>
+                  <li>Early access to updates</li>
+                </ul>
+                <a href="https://amazon.com/dp/PLACEHOLDER" class="purchase-item-button">
+                  <span class="prelaunch-badge">Pre-order</span>
+                  Get Complete Bundle
+                </a>
+              </div>
+
+              <div class="format-card">
+                <h4>Digital Only</h4>
+                <div class="format-price">$24.99</div>
+                <ul class="format-features">
+                  <li>Kindle/eBook format</li>
+                  <li>Instant download</li>
+                  <li>Searchable text</li>
+                  <li>Portable across devices</li>
+                </ul>
+                <a href="https://amazon.com/dp/PLACEHOLDER" class="purchase-item-button">
+                  <span class="prelaunch-badge">Pre-order</span>
+                  Get Digital Version
+                </a>
+              </div>
+            </div>
+
+            <div class="book-update">
+              <h3>Get Updates on the Book Release</h3>
+              <p>Stay informed about publication updates, early access opportunities, and related resources.</p>
+
+              <iframe src="https://embeds.beehiiv.com/794b6821-a119-4557-8f3d-fe37ea2296b4" data-test-id="beehiiv-embed"
+                width="100%" height="160" frameborder="0" scrolling="no"
+                style="border-radius: 4px; border: none; margin: 1em 0; background-color: rgba(255,255,255,0.1);"></iframe>
+
+              <div class="book-update-footer">
+                <a href="course.html" class="purchase-item-button">Explore Course Materials</a>
+                <a href="resources.html" class="purchase-item-button">Browse AI Tools</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <article id="footer" class="wrapper style1">
+      <footer>
+        <ul id="copyright">
+          <li>&copy; 2024 GenAI4All. All rights reserved.</li>
+        </ul>
+      </footer>
+    </article>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55384618-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-55384618-1');
+    </script>
+  </body>
 </html>
