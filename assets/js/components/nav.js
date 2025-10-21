@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <nav id="nav">
             <ul class="container">
                 <li><a href="index.html"><h3>GenAI4All</h3></a></li>
-                <li><a href="book/index.html">Book</a></li>
+                <li><a href="book/">Book</a></li>
                 <li><a href="course.html">Course</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="about.html">About</a></li>
