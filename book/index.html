@@ -26,9 +26,28 @@
       gtag('config', 'AW-17670095611');
     </script>
     
+    <!-- Event snippet for Purchase conversion page -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.open(url, '_blank', 'noopener,noreferrer');
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17670095611/smHKCJKCm7EbEPuF4elB',
+            'value': 1.0,
+            'currency': 'USD',
+            'transaction_id': '',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
+    
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png" />
-    <script type="module" crossorigin src="/book/assets/index-BWcvIFBY.js"></script>
-    <link rel="stylesheet" crossorigin href="/book/assets/index-BCRRc8dW.css">
+    <script type="module" crossorigin src="/book/assets/index-BczZ70dG.js"></script>
+    <link rel="stylesheet" crossorigin href="/book/assets/index-01wjaejF.css">
   </head>
 
   <body>
